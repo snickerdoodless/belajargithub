@@ -26,7 +26,7 @@ Tentunya tidak, ini adalah keuntungan sebuah perusahaan jika menggunakan DevOps:
 DevOps juga punya [gaji](https://www.jobstreet.co.id/id/career-advice/role/devops-engineer/salary) diatas rata-rata pekerjaan IT yang lainnya loh, dari sini tertarik gak untuk belajar DevOps?
 
 
-###### [DevOps Roadmap Career](Devops-Career-Roadmap-1.jpg)
+###### ![DevOps Roadmap Career](Devops-Career-Roadmap-1.jpg)
 
 Kalau kalian tertarik untuk belajar DevOps, kalian harus paham juga beberapa hal, mulai dari apa itu [Linux](https://opensource.com/resources/linux), [Version Control System](https://git-scm.com/book/id/v2/Memulai-Tentang-Version-Control#:~:text=Sistem%20Version%20Control%20Lokal,juga%20sangat%20rentan%20terkena%20galat.), [Virtualisasi](https://aws.amazon.com/id/what-is/virtualization/), [CI/CD](https://www.dicoding.com/blog/apa-itu-ci-cd/), dan lain lainnya.
 
