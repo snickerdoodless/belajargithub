@@ -1,7 +1,6 @@
 # Overview
----
+***
 ![](assets/apa-itu-devops-ilustrasi.jpeg)
-
 Kalian anak IT? udah pernah denger yang namanya Development Operational belum? kalau belum sini saya jelaskan. Berdasarkan pengertian google DevOps adalah serangkaian praktik yang bertujuan untuk meningkatkan kolaborasi dan komunikasi antara tim pengembangan (Development) dan tim operasional (Operations) dalam proses pengembangan dan pengelolaan sistem perangkat lunak.
 
 
@@ -24,7 +23,7 @@ Tentunya tidak, ini adalah keuntungan sebuah perusahaan jika menggunakan DevOps:
 
 DevOps juga punya [gaji](https://www.jobstreet.co.id/id/career-advice/role/devops-engineer/salary) diatas rata-rata pekerjaan IT yang lainnya loh, dari sini tertarik gak untuk belajar DevOps?
 
----
+***
 
 ###### [DevOps Roadmap Career](https://devopsideas.com/things-learn-devops-devops-career-roadmap/)
 ![](assets/Pasted%20image%2020240729063159.png)
