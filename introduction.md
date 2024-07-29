@@ -1,6 +1,6 @@
 # Overview
 ***
-![](assets/apa-itu-devops-ilustrasi.jpeg)
+![](apa-itu-devops-ilustrasi.jpeg)
 Kalian anak IT? udah pernah denger yang namanya Development Operational belum? kalau belum sini saya jelaskan. Berdasarkan pengertian google DevOps adalah serangkaian praktik yang bertujuan untuk meningkatkan kolaborasi dan komunikasi antara tim pengembangan (Development) dan tim operasional (Operations) dalam proses pengembangan dan pengelolaan sistem perangkat lunak.
 
 
@@ -26,7 +26,7 @@ DevOps juga punya [gaji](https://www.jobstreet.co.id/id/career-advice/role/devop
 ***
 
 ###### [DevOps Roadmap Career](https://devopsideas.com/things-learn-devops-devops-career-roadmap/)
-![](assets/Pasted%20image%2020240729063159.png)
+![](Devops-Career-Roadmap-1.jpg)
 
 Kalau kalian tertarik untuk belajar DevOps, kalian harus paham juga beberapa hal, mulai dari apa itu [Linux](https://opensource.com/resources/linux), [Version Control System](https://git-scm.com/book/id/v2/Memulai-Tentang-Version-Control#:~:text=Sistem%20Version%20Control%20Lokal,juga%20sangat%20rentan%20terkena%20galat.), [Virtualisasi](https://aws.amazon.com/id/what-is/virtualization/), [CI/CD](https://www.dicoding.com/blog/apa-itu-ci-cd/), dan lain lainnya.
 
