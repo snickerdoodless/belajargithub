@@ -1,7 +1,6 @@
 # Overview
 
-
-![](apa-itu-devops-ilustrasi.jpeg)
+![](assets/apa-itu-devops-ilustrasi.jpeg)
 
 Kalian anak IT? udah pernah denger yang namanya Development Operationals belum? kalau belum sini saya jelaskan. Berdasarkan pengertian google DevOps adalah serangkaian praktik yang bertujuan untuk meningkatkan kolaborasi dan komunikasi antara tim pengembangan (Development) dan tim operasional (Operations) dalam proses pengembangan dan pengelolaan sistem perangkat lunak.
 
@@ -37,4 +36,24 @@ Kalau kalian tertarik untuk belajar DevOps, kalian harus paham juga beberapa hal
 Santai dulu jangan kewalahan dulu, dimodul kali ini kita akan belajar semua itu tapi kita fokusin materi nya satu per-satu, team komandro juga sudah perkirakan akan hal ini kok, jadi kita bakalan buat modul yang bener bener straight line, yang artinya kalian bisa ikuti dari awal hingga akhir tanpa harus pusing mau belajar yang mana dulu.
 
 
-Langsung kita mulai aja yuk ke modul berikutnya.
+Berikut modul - modul yang kalian akan pelajari:
+
+- Introdcution to Linux & Virtualization
+- Understanding Build & Deploy
+- Introduction to Webserver
+- Cloud Computing & Containerization
+- Introduction to CI/CD
+- Introduction to Infrastructure as a Code (IaC)
+- IaC Advanced
+- Security Server Access
+
+Untuk mengasah kemampuan kalian dari modul - modul diatas terdapat latihan & project nya juga loh.
+
+
+Sebelum mulai saya ada quotes keren buat kalian,
+
+"*Your value is not determined by what you are, it is determined by what you are capable of*"
+
+Yang artinya kalau kalian ingin gaji besar skill kalian juga harus berharga, makanya wajib tuntas untuk belajar DevOps 😉.
+
+Jadi langsung kita mulai aja yuk ke modul pertama.
