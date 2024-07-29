@@ -1,6 +1,7 @@
 # Overview
 ***
 ![](apa-itu-devops-ilustrasi.jpeg)
+
 Kalian anak IT? udah pernah denger yang namanya Development Operational belum? kalau belum sini saya jelaskan. Berdasarkan pengertian google DevOps adalah serangkaian praktik yang bertujuan untuk meningkatkan kolaborasi dan komunikasi antara tim pengembangan (Development) dan tim operasional (Operations) dalam proses pengembangan dan pengelolaan sistem perangkat lunak.
 
 
@@ -51,7 +52,7 @@ Berikut modul - modul yang kalian akan pelajari:
 Untuk mengasah kemampuan kalian dari modul - modul diatas terdapat latihan & project nya juga loh.
 
 
-Sebelum mulai saya ada quotes keren buat kalian,
+Sebelum mulai ada quotes keren buat kalian,
 
 "***Your value is not determined by what you are, it is determined by what you are capable of***"
 
