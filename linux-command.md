@@ -1,6 +1,6 @@
 Author : snickerdoodless
 
-# **Chapter1. Linux and Virtualization**
+# Chapter1. Linux and Virtualization
 ***
 - [Introcution to Linux](#introduction-to-linux)
 - [Virtualization](#virtualization)
@@ -19,26 +19,24 @@ Author : snickerdoodless
 - Summary
 
 
-# Introduction to Linux
+## Introduction to Linux
 ***
 ![](Pasted%20image%2020240729130147.png)
 
-Sedikit perkenalan untuk operting system Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya Sistem Operasi.
+Sedikit perkenalan untuk operting system Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya Sistem Operasi. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat [disini](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg), Tapi jangan pusing, Dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
 
-Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat [disini](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg), Tapi jangan pusing, Dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
-
-Ada satu hal yang membedakan user Linux dan Windows yaitu penggunaan Terminal atau bisa disebut juga dengan Bash kalau di Windows itu sama seperti CMD/Powershell, user Linux sudah pasti bisa pakai Windows tapi belum tentu sebaliknya.
+Ada satu hal yang membedakan user Linux dan Windows yaitu penggunaan Terminal atau bisa disebut juga dengan Bash kalau di Windows itu sama seperti CMD/Powershell user Linux sudah pasti bisa pakai Windows tapi belum tentu sebaliknya.
 
 Tapi kalian tau gak kalo di komputer itu bisa di install komputer lagi?
 
-Ayo kita kenalan dengan Virtualisasi!
+Ayo kita kenalan dengan Virtualisasi! 🤖
 
 ![](Pasted%20image%2020240729131759.png)
 
 
 
 
-# Virtualization
+## Virtualization
 ***
 Pernah kebayang gak? Install Linux didalam Windows? Keren kan!, Itulah gunanya Virtualisasi, dengan adanya teknologi ini jadi kita gak perlu tuh beli banyak banyak komputer untuk dijadikan environment.
 
@@ -46,9 +44,7 @@ Contoh, Misalkan suatu perusahaan mau membuat websitenya sendiri otomatis yang d
 
 Disinilah Virtualisasi masuk, Untuk lebih memahami Virtualisasi mari kita analogikan, Bayangkan kamu memiliki sebuah bangunan besar yang dapat menampung banyak apartemen. Setiap apartemen memiliki ruangannya sendiri, tetapi mereka semua berbagi infrastruktur yang sama, seperti listrik, air, dan jaringan.
 
-Dalam konteks Virtualisasi, bangunan apartement tersebut dapat diibaratkan sebagai sebuah server host kalian, sedangkan apartemen-apartemen di dalamnya dapat diibaratkan sebagai mesin virtual (VM).
-
-Setiap VM memiliki sistem operasi dan aplikasinya sendiri, tetapi mereka semua berjalan di atas infrastruktur yang sama, yaitu server host. Dengan demikian, Resource server host kalian (Hardware) dapat dibagi dan digunakan secara efisien oleh banyak VM.
+Dalam konteks Virtualisasi, bangunan apartement tersebut dapat diibaratkan sebagai sebuah server host kalian, sedangkan apartemen-apartemen di dalamnya dapat diibaratkan sebagai mesin virtual (VM). Setiap VM memiliki sistem operasi dan aplikasinya sendiri, tetapi mereka semua berjalan di atas infrastruktur yang sama, yaitu server host. Dengan demikian, Resource server host kalian (Hardware) dapat dibagi dan digunakan secara efisien oleh banyak VM.
 
 Coba lihat gambar berikut:
 
@@ -75,7 +71,7 @@ Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan den
 
 
 
-## Multipass
+### Multipass
 
 Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Multipass ini adalah sebuah software yang khusus untuk Virtualisasi.
 
@@ -86,7 +82,7 @@ Karena Multipass itu lebih ringan dan cepat jadi kita memutuskan untuk memakai M
 > [!NOTE]
 > Modul ini menggunakan Windows untuk menginstall Multipass, kalau kalian pake Linux silahkan menyesuaikan saja.
 
-### Installing Multipass
+#### Installing Multipass
 
 Klik link [ini](https://multipass.run/install) dan pilih Windows untuk download.
 
@@ -100,7 +96,7 @@ Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/
 > [!NOTE]
 > Disini saya menggunakan CMD, kalian bebas bisa gunakan Terminal lain.
 
-### Launching Multipass
+#### Launching Multipass
 
 Buat kalian yang masih belum biasa dengan Terminal cukup ikutin aja, nanti lama lama terbiasa 😉.
 
@@ -127,5 +123,6 @@ Seperti yang kalian lihat untuk mengetahui command-command dimultipass itu buat 
 
 Nah, Sekarang multipass kita sudah siap dipakai selanjutnya kita akan belajar tentang command-line let's go to next section!
 
-# Command Line Interface
+## Command Line Interface
+***
 
