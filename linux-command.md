@@ -96,7 +96,7 @@ Setelah terdownload buka Multipass installernya lalu klik next aja terus hingga 
 Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/Powershell).
 
 
-> [!Info]
+> [!INFO]
 > Disini saya menggunakan CMD, kalian bebas bisa gunakan Terminal lain.
 
 ### Launching Multipass
