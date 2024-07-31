@@ -1,6 +1,7 @@
 Author : snickerdoodless
 
-[**Chapter1. Linux and Virtualization**]
+# [**Chapter1. Linux and Virtualization**]
+***
 - [Introcution to Linux](#introduction-to-linux)
 - [Virtualization](#virtualization)
 	- [Multipass](#multipass)
