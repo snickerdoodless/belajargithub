@@ -31,7 +31,7 @@ Tapi kalian tau gak kalo di komputer itu bisa di install komputer lagi?
 
 Ayo kita kenalan dengan Virtualisasi! 🤖
 
-![](vm meme.png)
+![](vm-meme.png)
 
 
 
