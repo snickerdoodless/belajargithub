@@ -21,7 +21,7 @@ Author : snickerdoodless
 
 ## Introduction to Linux
 ***
-![](Pasted%20image%2020240729130147.png)
+![](linux.jpeg)
 
 Sedikit perkenalan untuk operting system Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya Sistem Operasi. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat [disini](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg), Tapi jangan pusing, Dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
 
@@ -31,7 +31,7 @@ Tapi kalian tau gak kalo di komputer itu bisa di install komputer lagi?
 
 Ayo kita kenalan dengan Virtualisasi! 🤖
 
-![](Pasted%20image%2020240729131759.png)
+![](vm meme.png)
 
 
 
@@ -48,7 +48,7 @@ Dalam konteks Virtualisasi, bangunan apartement tersebut dapat diibaratkan sebag
 
 Coba lihat gambar berikut:
 
-![](Pasted%20image%2020240729144401.png)
+![](virtualization-infrastructure.png)
 
 Simpelnya gini,
 
