@@ -156,7 +156,11 @@ Argumen juga tidak terbatas asalkan kalian mengetikan command yang masuk akal se
 ping -4 192.168.18.1 -s 100 -c 5 -T tsonly > reportping.txt
 ```
 
+
+
 > Waduh kok banyak amat flag nya itu buat apa aja?
+
+
 
 Santai dulu kalian gak usah pahamin dulu perintah diatas buat apa nanti kita bahas yah sabar sekarang kita lanjut belajar basic command Linux dulu skuy 😄.
 
