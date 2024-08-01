@@ -22,10 +22,12 @@ Author : snickerdoodless
 
 ## Introduction to Linux
 ***
-![](Pasted%20image%2020240729130147.png)
+![](assets/Pasted%20image%2020240729130147.png)
 
 <div style="text-align: justify">
 Sedikit perkenalan untuk operting system Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya Sistem Operasi. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut</div>[Linux Distribution](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg).
+
+Tapi jangan pusing, Dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
 
 Ada satu hal yang membedakan user Linux dan Windows yaitu penggunaan Terminal atau bisa disebut juga dengan Bash kalau di Windows itu sama seperti CMD/Powershell user Linux sudah pasti bisa pakai Windows tapi belum tentu sebaliknya.
 
@@ -33,7 +35,7 @@ Tapi kalian tau gak kalo di komputer itu bisa di install komputer lagi?
 
 Ayo kita kenalan dengan Virtualisasi! 🤖
 
-![](Pasted%20image%2020240729131759.png)
+![](assets/Pasted%20image%2020240729131759.png)
 
 
 
@@ -50,7 +52,7 @@ Dalam konteks Virtualisasi, bangunan apartement tersebut dapat diibaratkan sebag
 
 Coba lihat gambar berikut:
 
-![](Pasted%20image%2020240729144401.png)
+![](assets/Pasted%20image%2020240729144401.png)
 
 Simpelnya gini,
 
@@ -90,7 +92,7 @@ Klik link [ini](https://multipass.run/install) dan pilih Windows untuk download.
 
 Setelah terdownload buka Multipass installernya lalu klik next aja terus hingga selesai.
 
-![](installing-multipass.gif)
+![](assets/installing-multipass.gif)
 
 Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/Powershell).
 
@@ -119,7 +121,7 @@ multipass exec ubuntu-instance whoami
 
 Kalian juga bisa melihat command-command lainnya dari Multipass dengan cara dibawah ini.
 
-![](multipass-help.gif)
+![](assets/multipass-help.gif)
 
 Seperti yang kalian lihat untuk mengetahui command-command dimultipass itu buat apa saja tinggal tambahkan "--help" di belakang command
 
@@ -157,11 +159,7 @@ Argumen juga tidak terbatas asalkan kalian mengetikan command yang masuk akal se
 ping -4 192.168.18.1 -s 100 -c 5 -T tsonly > reportping.txt
 ```
 
-
-
 > Waduh kok banyak amat flag nya itu buat apa aja?
-
-
 
 Santai dulu kalian gak usah pahamin dulu perintah diatas buat apa nanti kita bahas yah sabar sekarang kita lanjut belajar basic command Linux dulu skuy 😄.
 
