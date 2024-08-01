@@ -148,7 +148,7 @@ ipconfig --all
 # -- all = flag, flag juga dianggap sebagai argument
 ```
 
-> [!INFO]
+> [!NOTE]
 > Buat kalian yang bingung flag itu apa jadi disetiap command itu pasti punya flag, flag itu bakal diketik dengan character - atau -- contohnya seperti --help di section Multipass
 
 Argumen juga tidak terbatas asalkan kalian mengetikan command yang masuk akal serta menyesuaikan dengan flag yang diberikan command tersebut contohnya seperti ini:
