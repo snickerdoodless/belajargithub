@@ -86,8 +86,6 @@ Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Mul
 
 > Kenapa pake Multipass? Kan ada yang lain kayak Vbox dan kawan-kawan.
 
-<br />
-
 Karena Multipass itu lebih ringan, cepat, mudah dan fleksibel jadi kita memutuskan untuk memakai Multipass untuk menginstall ubuntu nya, Langsung aja cara install Multipass dibawah ini.
 
 <br />
