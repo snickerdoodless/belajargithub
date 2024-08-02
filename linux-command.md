@@ -43,8 +43,8 @@ Ayo kita kenalan dengan Virtualisasi! 🤖
 ![](assets/vm-meme.png)
 
 <br />
-[Knowledge Test: Linux Operating System](latihan/linux-operaing-system-quiz.md)
-<br />
+
+[Knowledge Test: Linux Operating System](latihan/linux-operating-system-quiz.md)
 
 ## Virtualization
 ***
