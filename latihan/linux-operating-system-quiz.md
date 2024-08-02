@@ -11,6 +11,7 @@ When does ubuntu first released?
 <details>
   <summary>Show Answer</summary>
   <br />
+  
   The correct answer is **D) 2004**.
 </details>
 
