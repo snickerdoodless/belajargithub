@@ -1,6 +1,6 @@
 Author : snickerdoodless
 
-> Quick introduction, my name is Kheyral Sutan and i wrote this chapter and if you see soo many images and gif because the way i learn is easier to see a visual representation from a theory. Thanks and enjoy reading.
+> Quick introduction my name is Kheyral Sutan and i wrote this chapter and if you see soo many images and gif because the way i learn is easier to see a visual representation from a theory. Thanks and enjoy reading.
 
 # Chapter 1. Linux and Virtualization
 ***
@@ -24,7 +24,7 @@ Author : snickerdoodless
 
 <br />
 
-## Introduction to Linux
+# Introduction to Linux
 ***
 ![](assets/linux.png)
 
@@ -42,11 +42,11 @@ Ayo kita kenalan dengan Virtualisasi! 🤖
 
 ![](assets/vm-meme.png)
 
+<br />
 [Knowledge Test: Linux Operating System](latihan/linux-operating-system-quiz.md)
-
 <br />
 
-## Virtualization
+# Virtualization
 ***
 Pernah kebayang gak? Install Linux didalam Windows? Keren kan!, Itulah gunanya Virtualisasi, dengan adanya teknologi ini jadi kita gak perlu tuh beli banyak banyak komputer untuk dijadikan environment.
 
@@ -79,8 +79,7 @@ Jadi intinya kalau mau install OS seperti pada umumnya caranya cuman install OS 
 Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM ubuntu di Multipass, Let's goo!
 
 <br />
-
-### Multipass
+## Multipass
 
 Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Multipass ini adalah sebuah software yang khusus untuk Virtualisasi.
 
@@ -96,7 +95,8 @@ Karena kita hanya pakai Ubuntu aja jadi Multipass solusinya, lagipula Multipass 
 > Modul ini menggunakan Windows untuk menginstall Multipass, kalau kalian pake Linux silahkan menyesuaikan saja.
 
 <br />
-#### Installing Multipass
+
+### Installing Multipass
 
 Klik link [ini](https://multipass.run/install) dan pilih Windows untuk download.
 
