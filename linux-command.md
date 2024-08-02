@@ -91,7 +91,6 @@ Karena Multipass itu lebih ringan, cepat, mudah dan fleksibel jadi kita memutusk
 > Modul ini menggunakan Windows untuk menginstall Multipass, kalau kalian pake Linux silahkan menyesuaikan saja.
 
 <br />
-
 #### Installing Multipass
 
 Klik link [ini](https://multipass.run/install) dan pilih Windows untuk download.
