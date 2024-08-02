@@ -78,15 +78,15 @@ Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Mul
 <br>
 
 > Kenapa pake Multipass? Kan ada yang lain kayak Vbox dan kawan-kawan.
-<br>
 
+<br>
 Karena Multipass itu lebih ringan dan cepat jadi kita memutuskan untuk memakai Multipass, Langsung aja cara install Multipass dibawah ini.
-<br>
 
+<br>
 > [!NOTE]
 > Modul ini menggunakan Windows untuk menginstall Multipass, kalau kalian pake Linux silahkan menyesuaikan saja.
-<br>
 
+<br>
 #### Installing Multipass
 
 Klik link [ini](https://multipass.run/install) dan pilih Windows untuk download.
