@@ -1,8 +1,6 @@
 Author : snickerdoodless
 
-Quick introduction, my name is kheyral Sutan and i wrote this chapter and if you see soo many images and gif because the way i learn is easier to see a visual representation from a theory. Thanks and enjoy reading.
-
-<br />
+> Quick introduction, my name is kheyral Sutan and i wrote this chapter and if you see soo many images and gif because the way i learn is easier to see a visual representation from a theory. Thanks and enjoy reading.
 
 # Chapter 1. Linux and Virtualization
 ***
