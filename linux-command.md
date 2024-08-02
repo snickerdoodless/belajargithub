@@ -44,7 +44,7 @@ Ayo kita kenalan dengan Virtualisasi! 🤖
 
 <br />
 
-[Knowledge Test: Linux Operating System](latihan/linux-operaing-system-quiz.md.md)
+[Knowledge Test: Linux Operating System](latihan/linux-operaing-system-quiz.md)
 
 <br />
 
