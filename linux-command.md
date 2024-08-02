@@ -22,7 +22,7 @@ Author : snickerdoodless
 
 ## Introduction to Linux
 ***
-![](linux.jpeg)
+![](assets/linux.jpeg)
 
 <div style="text-align: justify">
 Sedikit perkenalan untuk operting system Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya Sistem Operasi. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut </div>
@@ -37,7 +37,7 @@ Tapi kalian tau gak kalo di komputer itu bisa di install komputer lagi?
 
 Ayo kita kenalan dengan Virtualisasi! 🤖
 
-![](vm-meme.png)
+![](assets/vm-meme.png)
 
 
 
