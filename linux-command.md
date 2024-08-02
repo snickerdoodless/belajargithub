@@ -71,7 +71,7 @@ Jadi intinya kalau mau install OS seperti pada umumnya caranya cuman install OS 
 
 Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM di Multipass, Let's goo!
 <br>
-
+<br>
 ### Multipass
 
 Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Multipass ini adalah sebuah software yang khusus untuk Virtualisasi.
