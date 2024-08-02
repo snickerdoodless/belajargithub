@@ -112,7 +112,7 @@ Klik link [ini](https://multipass.run/install) dan pilih Windows untuk download.
 
 Setelah terdownload buka Multipass installernya lalu klik next aja terus hingga selesai.
 
-![](assets/installing-multipass.gif =250x200)
+<img src="assets/installing-multipass.gif" width="250" height="200">
 
 Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/Powershell).
 
