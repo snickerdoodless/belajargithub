@@ -1,5 +1,7 @@
 Author : snickerdoodless
 
+<br />
+
 # Chapter 1. Linux and Virtualization
 ***
 - [Introcution to Linux](#introduction-to-linux)
@@ -19,9 +21,13 @@ Author : snickerdoodless
 		- Pattern Matching 
 - Summary<br>
 
+<br />
+
 ## Introduction to Linux
 ***
 ![](assets/linux.jpeg)
+
+<br />
 
 Sedikit perkenalan untuk operting system Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya Sistem Operasi. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut [Linux Distribution](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg).
 
@@ -35,8 +41,7 @@ Ayo kita kenalan dengan Virtualisasi! 🤖
 
 ![](assets/vm-meme.png)
 
-
-
+<br />
 
 ## Virtualization
 ***
