@@ -74,11 +74,14 @@ Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan den
 
 ### Multipass
 
-Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Multipass ini adalah sebuah software yang khusus untuk Virtualisasi.<br>
+Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Multipass ini adalah sebuah software yang khusus untuk Virtualisasi.
+<br>
 
-> Kenapa pake Multipass? Kan ada yang lain kayak Vbox dan kawan-kawan.<br>
+> Kenapa pake Multipass? Kan ada yang lain kayak Vbox dan kawan-kawan.
+<br>
 
-Karena Multipass itu lebih ringan dan cepat jadi kita memutuskan untuk memakai Multipass, Langsung aja cara install Multipass dibawah ini.<br>
+Karena Multipass itu lebih ringan dan cepat jadi kita memutuskan untuk memakai Multipass, Langsung aja cara install Multipass dibawah ini.
+<br>
 
 > [!NOTE]
 > Modul ini menggunakan Windows untuk menginstall Multipass, kalau kalian pake Linux silahkan menyesuaikan saja.<br>
