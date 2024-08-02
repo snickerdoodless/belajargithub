@@ -80,7 +80,7 @@ Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan den
 
 
 ### Multipass
-‒
+
 Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Multipass ini adalah sebuah software yang khusus untuk Virtualisasi.
 
 <br />
@@ -164,20 +164,25 @@ ipconfig --all
 # -- all = flag, flag juga dianggap sebagai argument
 ```
 
+<br />
+
 > [!NOTE]
 > Buat kalian yang bingung flag itu apa jadi disetiap command itu pasti punya flag, flag itu bakal diketik dengan character - atau -- contohnya seperti --help di section Multipass
+
+<br />
 
 Argumen juga tidak terbatas asalkan kalian mengetikan command yang masuk akal serta menyesuaikan dengan flag yang diberikan command tersebut contohnya seperti ini:
 ```bash
 ping -4 192.168.18.1 -s 100 -c 5 -T tsonly > reportping.txt
 ```
 
+<br />
+
 > Waduh kok banyak amat flag nya itu buat apa aja?
 
 Santai dulu kalian gak usah pahamin dulu perintah diatas buat apa nanti kita bahas yah sabar sekarang kita lanjut belajar basic command Linux dulu skuy 😄.
 
-
-
+<br />
 
 ### Basic Commands
 
