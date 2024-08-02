@@ -1,6 +1,6 @@
 Author : snickerdoodless
 
-> Quick introduction, my name is kheyral Sutan and i wrote this chapter and if you see soo many images and gif because the way i learn is easier to see a visual representation from a theory. Thanks and enjoy reading.
+> Quick introduction, my name is Kheyral Sutan and i wrote this chapter and if you see soo many images and gif because the way i learn is easier to see a visual representation from a theory. Thanks and enjoy reading.
 
 # Chapter 1. Linux and Virtualization
 ***
@@ -44,7 +44,7 @@ Ayo kita kenalan dengan Virtualisasi! 🤖
 
 <br />
 
-[Knowledge Test: Linux Operating System](latihan/Linux%20Operating%20System%20Quiz.md)
+[Knowledge Test: Linux Operating System](latihan/linux-operaing-system-quiz.md.md)
 
 <br />
 
@@ -81,7 +81,7 @@ Jadi intinya kalau mau install OS seperti pada umumnya caranya cuman install OS 
 Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM ubuntu di Multipass, Let's goo!
 <br />
 
-[Knowledge Test: Virtualization](latihan/Virtualization%20System%20Quiz.md)
+[Knowledge Test: Virtualization](latihan/virtualization-system-quiz.md.md)
 
 <br />
 ### Multipass
