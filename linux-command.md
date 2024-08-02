@@ -87,7 +87,6 @@ Berikut adalah keuntungan utama menggunakan virtualisasi:
 -  **Mobilitas dan Migrasi**: Mudah buat bermigrasi dan minimalisirkan downtime.
 
 Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM ubuntu di Multipass, let's goo!
-
 <br />
 
 ## Multipass
