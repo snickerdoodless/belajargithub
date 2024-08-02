@@ -89,7 +89,6 @@ Karena Multipass itu lebih ringan, cepat, mudah dan fleksibel jadi kita memutusk
 
 > [!NOTE]
 > Modul ini menggunakan Windows untuk menginstall Multipass, kalau kalian pake Linux silahkan menyesuaikan saja.
-<br />
 
 #### Installing Multipass
 
