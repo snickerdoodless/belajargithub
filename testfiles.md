@@ -1,14 +1,28 @@
-# Hidden Content
+# Quiz
 
-Click the text box below to reveal hidden content.
+## Question 1
+What is the capital of France?
 
 <details>
-  <summary>Click me to expand!</summary>
+  <summary>Show Answer</summary>
   
-  ## Hidden Content
-  This is the content that was hidden. You can add any Markdown content here.
+  The capital of France is **Paris**.
+</details>
+
+## Question 2
+Which of the following is a prime number?
+
+<details>
+  <summary>Show Answer</summary>
   
-  - Item 1
-  - Item 2
-  - Item 3
+  The prime number among the options is **7**.
+</details>
+
+## Question 3
+What is the chemical symbol for water?
+
+<details>
+  <summary>Show Answer</summary>
+  
+  The chemical symbol for water is **H₂O**.
 </details>
