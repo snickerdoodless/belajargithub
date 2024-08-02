@@ -11,10 +11,9 @@ Author : snickerdoodless
 	    - [Launching Multipass](#launching-multipass)
 - [Command Line Interface](#command-line-interface)
 	- [Basic Commands](#basic_commands)
-		- [Navigating](#navigating)
-		- [Creating](#creating)
-		- Removing
-		- Manual
+		- [Navigating Linux System](#navigating-linux-system)
+		- [Managing File & Folder](#managing-file-&-folder)
+		- [Linux Manpages](#linux-manpages)
 	- Command Line Expansions
 		- Redirection
 		- List Operator
@@ -32,7 +31,7 @@ Author : snickerdoodless
 
 Sedikit perkenalan untuk operting system Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya Sistem Operasi. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut [Linux Distribution](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg).
 
-Tapi jangan pusing, Dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
+Tapi jangan pusing, dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
 
 Ada satu hal yang membedakan user Linux dan Windows yaitu penggunaan Terminal atau bisa disebut juga dengan Bash kalau di Windows itu sama seperti CMD/Powershell user Linux sudah pasti bisa pakai Windows tapi belum tentu sebaliknya.
 
@@ -48,11 +47,11 @@ Ayo kita kenalan dengan Virtualisasi! 🤖
 
 # Virtualization
 ***
-Pernah kebayang gak? Install Linux didalam Windows? Keren kan!, Itulah gunanya Virtualisasi, dengan adanya teknologi ini jadi kita gak perlu tuh beli banyak banyak komputer untuk dijadikan environment.
+Pernah kebayang gak? Install Linux didalam Windows? Keren kan! Itulah gunanya Virtualisasi, dengan adanya teknologi ini jadi kita gak perlu tuh beli banyak banyak komputer untuk dijadikan environment.
 
-Contoh, Misalkan suatu perusahaan mau membuat websitenya sendiri otomatis yang dia butuhkan environment komputer khusus untuk server, database, dan komponen lainnya, coba kalian bayangin dari segitu banyaknya requirements untuk membuat suatu website, Masa perusahaan tersebut harus beli banyak komputer? Gak efisien kan? Mahal pula 🥴.
+Contoh, misalkan suatu perusahaan mau membuat websitenya sendiri otomatis yang dia butuhkan environment komputer khusus untuk server, database, dan komponen lainnya, coba kalian bayangin dari segitu banyaknya requirements untuk membuat suatu website, masa perusahaan tersebut harus beli banyak komputer? Gak efisien kan? Mahal pula 🥴.
 
-Disinilah Virtualisasi masuk, Untuk lebih memahami Virtualisasi mari kita analogikan, Bayangkan kamu memiliki sebuah bangunan besar yang dapat menampung banyak apartemen. Setiap apartemen memiliki ruangannya sendiri, tetapi mereka semua berbagi infrastruktur yang sama, seperti listrik, air, dan jaringan.
+Disinilah Virtualisasi masuk, untuk lebih memahami Virtualisasi mari kita analogikan, bayangkan kamu memiliki sebuah bangunan besar yang dapat menampung banyak apartemen. Setiap apartemen memiliki ruangannya sendiri, tetapi mereka semua berbagi infrastruktur yang sama, seperti listrik, air, dan jaringan.
 
 Dalam konteks Virtualisasi, bangunan apartement tersebut dapat diibaratkan sebagai sebuah server host kalian, sedangkan apartemen-apartemen di dalamnya dapat diibaratkan sebagai mesin virtual (VM). Setiap VM memiliki sistem operasi dan aplikasinya sendiri, tetapi mereka semua berjalan di atas infrastruktur yang sama, yaitu server host. Dengan demikian, Resource server host kalian (Hardware) dapat dibagi dan digunakan secara efisien oleh banyak VM.
 
@@ -74,20 +73,32 @@ Operating System pada virtualisasi
 Hardware > OS Host > Virtualization > Sharing Resource Hardware > OS VM > Application 
 ```
 
-Jadi intinya kalau mau install OS seperti pada umumnya caranya cuman install OS pada Hardware kalian, Sedangkan Virtualisasi sama seperti yang sudah dianalogikan diatas untuk menjalankan Virtualisasi di komputer kalian Hardware kalian akan sharing resource (Hardwarenya) dengan OS host untuk membuat mesin Virtualisasi baru, Begitu jadinya.😊
+Jadi intinya kalau mau install OS seperti pada umumnya caranya cuman install OS pada Hardware kalian, sedangkan Virtualisasi sama seperti yang sudah dianalogikan diatas untuk menjalankan Virtualisasi di komputer kalian Hardware kalian akan sharing resource (Hardwarenya) dengan OS host untuk membuat mesin Virtualisasi baru, begitu jadinya.😊
 
-Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM ubuntu di Multipass, Let's goo!
+Berikut adalah keuntungan utama menggunakan virtualisasi:
+
+-  **Penghematan Biaya**: Hemat karena gak usah beli komputer yang banyak.
+-  **Efisiensi Resources**: Manageable CPU, memori, dan storage.
+-  **Skalabilitas dan Fleksibilitas**: Mudah menambah atau mengurangi kapasitas environment.
+-  **Manajemen Mudah**: Administrasi, backup, dan pemulihan lebih efisien.
+-  **Keamanan dan Isolasi**: Mesin virtual terisolasi dan meningkatkan keamanan.
+-  **Disaster Recovery**: Snapshot dan backup mudah dalam pemulihan data.
+-  **Testing dan Development**: Testing environment yang fleksibel tanpa ganggu sistem utama.
+-  **Mobilitas dan Migrasi**: Mudah buat bermigrasi dan minimalisirkan downtime.
+
+Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM ubuntu di Multipass, let's goo!
 
 <br />
+
 ## Multipass
 
-Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Multipass ini adalah sebuah software yang khusus untuk Virtualisasi.
+Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, jadi pada umumnya Multipass ini adalah sebuah software yang khusus digunakan untuk Virtualisasi operating system khusus untuk Ubuntu.
 
 <br />
 
 > Kenapa pake Multipass? Kan ada yang lain kayak Vbox dan kawan-kawan.
 
-Karena kita hanya pakai Ubuntu aja jadi Multipass solusinya, lagipula Multipass itu lebih ringan, cepat, mudah dan fleksibel jadi kita memutuskan untuk memakai Multipass untuk modul kali ini, Langsung aja cara install Multipass dibawah ini.
+Karena kita hanya pakai Ubuntu aja jadi Multipass solusinya, lagipula Multipass itu lebih ringan, cepat, mudah dan fleksibel jadi kita memutuskan untuk memakai Multipass untuk modul kali ini, misalkan ingin menggunakan Hypervisor maka akan lebih ribet karena kita harus download OS nya terlebih dahulu dalam bentuk CD, ISO, ataupun VM yang sudah jadi, langsung aja cara install Multipass dibawah ini.
 
 <br />
 
@@ -112,7 +123,7 @@ Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/
 > Disini saya menggunakan CMD, kalian bebas bisa gunakan Terminal lain.
 
 <br />
-#### Launching Multipass
+### Launching Multipass
 
 Buat kalian yang masih belum biasa dengan Terminal cukup ikutin aja, nanti lama lama terbiasa 😉.
 
@@ -137,13 +148,13 @@ Kalian juga bisa melihat command-command lainnya dari Multipass dengan cara diba
 
 Seperti yang kalian lihat untuk mengetahui command-command dimultipass itu buat apa saja tinggal tambahkan "--help" di belakang command
 
-Nah, Sekarang multipass kita sudah siap dipakai selanjutnya kita akan belajar tentang command-line let's go to next section!
+Nah, sekarang multipass kita sudah siap dipakai selanjutnya kita akan belajar tentang command-line let's go to next section!
 
-[Knowledge Test]()
+[Knowledge Test](latihan/virtualization-system-quiz.md)
 
 <br />
 
-## Command Line Interface
+# Command Line Interface
 ***
 "Command Line Interface atau biasa disebut CLI adalah interface yang memungkinkan user untuk berinteraksi dengan komputer atau sistem operasi melalui teks perintah. Pengguna mengetikkan perintah di baris perintah (command line) dan sistem akan mengeksekusi perintah tersebut serta menampilkan hasilnya di layar" - Google (2k24).
 
@@ -187,11 +198,11 @@ Santai dulu kalian gak usah pahamin dulu perintah diatas buat apa nanti kita bah
 
 <br />
 
-### Basic Commands
+## Basic Commands
 
-Semua pasti berawal dari basic, disection ini kita bakal belajar perintah-perintah dasar Linux mulai dari bagaimana caranya navigasi di Linux sistem, Membuat file atau folder, Menghapus file & folder, dan juga membaca manual tentang perintah perintah dasar di Linux, langsung aja yang pertama kita akan belajar cara navigasi di Linux System.
+Semua pasti berawal dari basic, disection ini kita bakal belajar perintah-perintah dasar Linux mulai dari bagaimana caranya navigasi di Linux sistem, membuat file atau folder, menghapus file & folder, dan juga membaca manual tentang perintah perintah dasar di Linux, langsung aja yang pertama kita akan belajar cara navigasi di Linux System.
 
-#### Navigating
+### Navigating Linux System
 
 Untuk berpindah - pindah tempat pada Linux System itu menggunakan perintah cd yaitu alias dari change directory, ikuti perintah dibawah ini dari awal agar kalian tidak bingung.
 
@@ -204,58 +215,67 @@ cd /tmp
 
 # Melihat posisi kita didalam Linux System
 pwd
-result: /tmp
+# result: /tmp
 
 # Pindah ke folder terakhir kali kita berada
 cd -
-result: /home/ubuntu
+# result: /home/ubuntu
 
 # Pindah mundur satu folder kebelakang
 cd ..
-result: /home
+# result: /home
 
 # Pindah ke /etc/opt folder dari posisi kita saat ini (yaitu /home)
 cd ../etc/opt
 pwd
-result: /etc/opt
+# result: /etc/opt
 
 # Pindah mundur dua folder kebelakang
 cd ../..
 pwd
-result: /
+# result: /
 
 # Menggunakan perintah cd untuk muter muter folder dari home ke home lagi
 cd /home
 pwd
-result: /home
+# result: /home
 
 cd /home/ubuntu/../../etc/opt/../../tmp/../home
 pwd
-result: /home
+# result: /home
 ```
 
 Gimana? paham nggak? gampang kan, itu adalah perintah basic Linux buat navigasi atau berpindah pindah folder/direktori, kalau di Windows itu tinggal pencet ⬅️ atau ➡️ arrow untuk berpindah pindah tempat direktori kalian. Next kita bakal belajar cara membuat direktori dan file.
 
-#### Creating
+### Managing Files & Folder
 
-Untuk membuat folder atau file pada Linux System bisa menggunakan perintah mkdir, touch, nano atau vim, Tanpa basa - basi kalian bisa ikuti perintahnya dibawah ini.
+Untuk manage file atau folder pada Linux System bisa menggunakan perintah mkdir, touch, file, cat, nano atau vim, Tanpa basa - basi kalian bisa ikuti perintahnya dibawah ini.
 
 <br />
 
-> ![!NOTE]
->  Untuk cara menggunakan VIM akan dibahas di next chapter, sekarang kita hanya menggunakan nano
+> [!NOTE]
+>  Untuk cara menggunakan VIM akan dibahas di next section, sekarang kita hanya menggunakan nano.
 
 <br />
 
 ```bash
-#Membuat file kosong dengan touch
+#M
+uembuat file kosong dengan touch
 touch testfile.txt
 ````
 
 ```bash
-#Melihat file dilokasi saat ini
+# Melihat file dilokasi saat ini
 ls 
-result: reportping.txt testfile.txt
+
+# result: reportping.txt testfile.txt
+```
+
+```bash
+# Mengidentifikasi tipe file
+file testfile.txt
+
+# resutl: testfile.txt: ASCII text
 ```
 
 ```bash
@@ -266,20 +286,29 @@ nano testfile.txt
 ![](assets/nano-command.gif)
 CTRL + X ENTER Y TO SAVE & EXIT
 
-Dan kalian bisa langsung membuat file dengan nano tanpa 'touch' command terlebih dahulu.
+```bash
+# Melihat isi konten sebuah file
+cat testfile.txt
+
+# result: Hello World!
+```
+
+Dan kalian bisa langsung membuat file langsung dengan nano tanpa 'touch' command terlebih dahulu.
 
 ```bash
 # Membuat folder kosong
 mkdir testfolder
 ls -p
-result: reportping.txt testfile.txt testfolder/
+
+# result: reportping.txt testfile.txt testfolder/
 ```
 
-Kalian notice tanda '/' di Linux System itu menandakan bahwa itu adalah sebuah folder, Untuk mengkonfirmasi nya kalian bisa melihat peritah dibawah ini
+Kalian notice tanda '/' di Linux System itu menandakan bahwa itu adalah sebuah folder, untuk mengkonfirmasi nya kalian bisa melihat peritah dibawah ini.
 
 ```bash
 ls -la
-result:
+
+# result:
 total 48
 drwxr-x--- 6 ubuntu ubuntu 4096 Aug  2 09:05 .
 drwxr-xr-x 3 root   root   4096 Jul 31 19:55 ..
@@ -300,14 +329,79 @@ Kalian bisa abaikan saja yang lain dan fokus hanya pada testfolder, bisa kalian 
 
 <br />
 
-> ![!NOTE]
+> [!NOTE]
 >  Just a quick note, buat kalian yang bingung apa tuh rwxrwxrwx ini sebenernya berkaitan dengan Linux File System dan ini akan kita bahas nanti di last section, simplenya gini r = read, w = write, x = execute dan character '-' itu menandakan no permission alias tidak ada izin, also as you can see ada nama ubuntu di testfolder dan testfile yang artinya mereka berdua punya user ubuntu.
 
 <br />
 
+Kalian juga bisa identifikasi folder menggunakan perintah 'file' seperti file diatas.
+
 ```bash
 # Memindahkan file ke dalam folder
+mv testfile testfolder/
+ls testfolder/
 
+# result: testfile.txt
 ```
 
+```bash
+# Copy file dari direktori testfolder/ ke /home/ubuntu
+cp testfolder/testfile.txt /home/ubuntu
+# atau
+cp testfolder/testfile.txt . # titik melambangkan posisi folder saat ini
+ls -R
 
+# result:
+reportping.txt  testfile.txt  testfolder
+
+./testfolder:
+testfile.txt
+```
+
+```bash
+# Mengspesifikan pembuatan file difolder tertentu
+nano /tmp/tempfile.txt
+```
+
+![](nano-command2.gif)
+
+```bash
+# Menghapus file 
+rm reportping.txt
+ls
+
+# result: testfile.txt testfolder
+```
+
+```bash
+# Menghapus folder
+rmdir testfolder/
+
+# result: rmdir: failed to remove 'testfolder/': Directory not empty
+```
+
+Bisa kalian lihat kalau menghapus folder menggunakan 'rmdir' itu tidak bisa, karena 'rmdir' hanya untuk menghapus folder/directory kosong.
+
+```bash
+# Menghapus folder dengan paksa
+rm -rf testfolder/
+ls
+
+# result: testfile.txt
+```
+
+```bash
+# Menghapus folder dan file bersamaan
+mkdir testfolder/
+ls
+
+# result: testfile.txt testfolder
+rm -rf testfolder/ testfile.txt
+ls
+
+# result: 
+```
+
+Sampai sini paham? kalau belum paham santai next section kita bakal bahas tentang dokuentasi dari sebuah perintah tapi kalau kalian sudah paham, selamat kalian adalah calon-calon Linux System Administrator dan satu langkah maju menuju seorang DevOps, horee!! 🥳. 
+
+## Linux Manpages
