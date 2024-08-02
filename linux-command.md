@@ -57,6 +57,8 @@ Coba lihat gambar berikut:
 
 ![](assets/virtualization-infrastructure.png)
 
+<br />
+
 Simpelnya gini,
 
 Operating System pada umumnya
@@ -71,27 +73,26 @@ Operating System pada virtualisasi
 Hardware > OS Host > Virtualization > Sharing Resource Hardware > OS VM > Application 
 ```
 
-
 Jadi intinya kalau mau install OS seperti pada umumnya caranya cuman install OS pada Hardware kalian, Sedangkan Virtualisasi sama seperti yang sudah dianalogikan diatas untuk menjalankan Virtualisasi di komputer kalian Hardware kalian akan sharing resource (Hardwarenya) dengan OS host untuk membuat mesin Virtualisasi baru, Begitu jadinya.😊
 
 Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM di Multipass, Let's goo!
 <br />
-<br />
+
 
 ### Multipass
 
 Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, Jadi intinya Multipass ini adalah sebuah software yang khusus untuk Virtualisasi.
-
 <br />
 
 > Kenapa pake Multipass? Kan ada yang lain kayak Vbox dan kawan-kawan.
-<br />
 Karena Multipass itu lebih ringan, cepat, mudah dan fleksibel jadi kita memutuskan untuk memakai Multipass untuk menginstall ubuntu nya, Langsung aja cara install Multipass dibawah ini.
-<br />
+
 <br />
 
 > [!NOTE]
 > Modul ini menggunakan Windows untuk menginstall Multipass, kalau kalian pake Linux silahkan menyesuaikan saja.
+
+<br />
 
 #### Installing Multipass
 
