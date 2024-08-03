@@ -1,6 +1,9 @@
-Author : snickerdoodless
+Contributor : 
+- snickerdoodless
+- mawlibrahim
+- mawanx
 
-> Quick introduction my name is Kheyral Sutan and i wrote this chapter and if you see soo many images and gif because the way i learn is easier to see a visual representation from a theory. Thanks and enjoy reading.
+> Learning with visual representation is easier than reading only-theoretical materials - snickerdoodles
 
 # Chapter 1. Linux and Virtualization
 ***
@@ -14,11 +17,23 @@ Author : snickerdoodless
 		- [Navigating Linux System](#navigating-linux-system)
 		- [Managing File & Folder](#managing-file-&-folder)
 		- [Linux Manpages](#linux-manpages)
-	- Command Line Expansions
-		- Redirection
-		- List Operator
-		- Pattern Matching
-- Linux File System
+	- [Command Line Expansions](#command-line-expansions)
+		- [Redirection](#redirection)
+		- [Pattern Matching](#pattern-matching)
+		- [List Operator](#list-operator)
+- [Multipass Mounting](#multipass-mounting)
+- VIM
+	- How to Master VIM
+	- VIM Pro & Cons
+- Bash Scripting
+	- Syntax
+		- Variable
+		- Condition
+		- Loops
+	- Making Function
+	- Receiving Bash Input File
+- Practice 1
+- Practice 2
 - Summary
 
 <br />
@@ -29,7 +44,7 @@ Author : snickerdoodless
 
 <br />
 
-Sedikit perkenalan untuk operting system Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya Sistem Operasi. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut [Linux Distribution](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg).
+Sedikit perkenalan untuk Operting System Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya OS. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut [Linux Distribution](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg).
 
 Tapi jangan pusing, dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
 
@@ -41,7 +56,7 @@ Ayo kita kenalan dengan Virtualisasi! 🤖
 
 ![](assets/vm-meme.png)
 
-[Knowledge Test: Linux Operating System](latihan/linux-operating-system-quiz.md)
+[**Knowledge Test: Linux Operating System**](latihan/linux-operating-system-quiz.md)
 
 <br />
 
@@ -87,6 +102,7 @@ Berikut adalah keuntungan utama menggunakan virtualisasi:
 -  **Mobilitas dan Migrasi**: Mudah buat bermigrasi dan minimalisirkan downtime.
 
 Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM ubuntu di Multipass, let's goo!
+
 <br />
 
 ## Multipass
@@ -98,7 +114,6 @@ Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, jadi pada umumny
 > Kenapa pake Multipass? Kan ada yang lain kayak Vbox dan kawan-kawan.
 
 Karena kita hanya pakai Ubuntu aja jadi Multipass solusinya, lagipula Multipass itu lebih ringan, cepat, mudah dan fleksibel jadi kita memutuskan untuk memakai Multipass untuk modul kali ini, misalkan ingin menggunakan Hypervisor maka akan lebih ribet karena kita harus download OS nya terlebih dahulu dalam bentuk CD, ISO, ataupun VM yang sudah jadi, langsung aja cara install Multipass dibawah ini.
-
 <br />
 
 > [!NOTE]
@@ -112,9 +127,7 @@ Klik link [ini](https://multipass.run/install) dan pilih Windows untuk download.
 
 Setelah terdownload buka Multipass installernya lalu klik next aja terus hingga selesai.
 
-<p align="center">
-  <img src="assets/installing-multipass.gif" width="640" height="360"/>
-</p>
+![](assets/installing-multipass.gif)
 
 Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/Powershell).
 
@@ -124,7 +137,6 @@ Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/
 > Disini saya menggunakan CMD, kalian bebas bisa gunakan Terminal lain.
 
 <br />
-
 ### Launching Multipass
 
 Buat kalian yang masih belum biasa dengan Terminal cukup ikutin aja, nanti lama lama terbiasa 😉.
@@ -148,11 +160,11 @@ Kalian juga bisa melihat command-command lainnya dari Multipass dengan cara diba
 
 ![](assets/multipass-help.gif)
 
-Seperti yang kalian lihat untuk mengetahui command-command dimultipass itu buat apa saja tinggal tambahkan "--help" di belakang command
+Seperti yang kalian lihat untuk mengetahui command-command dimultipass itu buat apa saja tinggal tambahkan '--help' di belakang command
 
 Nah, sekarang multipass kita sudah siap dipakai selanjutnya kita akan belajar tentang command-line let's go to next section!
 
-[Knowledge Test](latihan/virtualization-system-quiz.md)
+[**Knowledge Test: Virtualization**](latihan/virtualization-system-quiz.md)
 
 <br />
 
@@ -261,8 +273,7 @@ Untuk manage file atau folder pada Linux System bisa menggunakan perintah mkdir,
 <br />
 
 ```bash
-#M
-uembuat file kosong dengan touch
+#Membuat file kosong dengan touch
 touch testfile.txt
 ````
 
@@ -332,7 +343,7 @@ Kalian bisa abaikan saja yang lain dan fokus hanya pada testfolder, bisa kalian 
 <br />
 
 > [!NOTE]
->  Just a quick note, buat kalian yang bingung apa tuh rwxrwxrwx ini sebenernya berkaitan dengan Linux File System dan ini akan kita bahas nanti di last section, simplenya gini r = read, w = write, x = execute dan character '-' itu menandakan no permission alias tidak ada izin, also as you can see ada nama ubuntu di testfolder dan testfile yang artinya mereka berdua punya user ubuntu.
+>  Just a quick note, buat kalian yang bingung apa tuh rwxrwxrwx ini sebenernya berkaitan dengan Linux File Permission dan ini akan panjang jika dibahas, simplenya gini r = read, w = write, x = execute dan character '-' itu menandakan no permission alias tidak ada izin, also as you can see ada nama ubuntu di testfolder dan testfile yang artinya mereka berdua punya user ubuntu.
 
 <br />
 
@@ -365,7 +376,7 @@ testfile.txt
 nano /tmp/tempfile.txt
 ```
 
-![](nano-command2.gif)
+![](assets/nano-command2.gif)
 
 ```bash
 # Menghapus file 
@@ -404,6 +415,189 @@ ls
 # result: 
 ```
 
-Sampai sini paham? kalau belum paham santai next section kita bakal bahas tentang dokuentasi dari sebuah perintah tapi kalau kalian sudah paham, selamat kalian adalah calon-calon Linux System Administrator dan satu langkah maju menuju seorang DevOps, horee!! 🥳. 
+Sampai sini paham? kalau belum paham santai next section kita bakal bahas tentang dokuentasi dari sebuah perintah agar kalian bisa lebih paham tapi kalau kalian sudah paham, selamat kalian adalah calon-calon Linux System Administrator dan satu langkah maju menuju seorang DevOps, horee!! 🥳. 
 
 ## Linux Manpages
+
+Kalau kalian merasa kurang mengerti gunanya berbagai flag dalam sebuah command walaupun sudah pakai trick '--help' kalian jangan bingung, Linux sendiri punya official documentation untuk masing masing command yang kalian ingin ketahui, jadi section kali ini gak akan panjang-panjang karena yang akan dibahas sangat simple yaitu gimana caranya membaca dokumentasi dari sebuah command di Linux System, langsung aja dibawah ini.
+
+```bash
+# Untuk melihat manual pada sebuah command
+man (command yang ingin dipelajari)
+```
+
+![](assets/man-command.gif)
+
+Seperti gambar diatas kalian juga bisa berinteraksi dan navigasi saat membaca manual dari man command pencet 'q' untuk quit dan pencet 'h' untuk guide cara berinteraksi di man interface. Selain dari man command kalian juga bisa gunakan man lewat google, caranya klik [disini](https://man7.org/linux/man-pages/) dan cari command apa yang kalian mau lihat.
+<br />
+
+Table lengkap cara navigasi man interface:
+
+| Command   | Result                                  |
+| --------- | --------------------------------------- |
+| Spacebar  | Scroll kebawah dengan melompat selayar  |
+| DownArrow | Scroll kebawah satu persatu             |
+| UpArrow   | Scroll keatas satu persatu              |
+| D         | Scroll kebawah melompat setengah layar  |
+| U         | Scroll keatas melompat setengah layar   |
+| /string   | Untuk mencari suatu kata atau paragraph |
+| N         | Kembali ke pencarian sebelumnya         |
+| Shift+N   | Kembali ke pencarian semula             |
+| G         | Pergi ke start manpage                  |
+| Shift+G   | Pergi ke end manpage                    |
+| Q         | Keluar dari manpage interface           |
+
+<br />
+
+> [!NOTE]
+> Ada alternative man command yaitu info command, bedanya info itu lebih complete dan lengkapp hingga penjelasan dan contoh dari setiap flag intinya seperti full documentation dari sebuah command, tapi info command sudah tidak dimaintain lagi dikarenakan sudah tidak terlalu relevan dan digantikan dengan man command.
+
+<br />
+
+## Command Line Expansions
+
+Command line expansions yaitu fitur shell bawaan dari Linux System yang memungkinkan kalian bisa manipulate and expanding sebuah command, file names, dan directory di CLI kalian, fitur ini bisa digunakan untuk shortcut, patterns, variables untuk men-spesifikan sebuah files, directory atau commands lainnya. 
+
+Bingung kan? gapapa kita langsung masuk ke contoh disection berikutnya.
+<br />
+
+### Redirection
+
+Kalian sadar gak disection atas yang membahas CLI dan Argument disalah satu contoh command nya ada yang menggunakan character '>', ternyata itu ada guna nya lohh, seperti judul section yaitu redirection kegunaan character seperti '>' (output redirection), '< (input redirection)', '&' (both redirection), adalah fitur Linux yang keren buat mempermudah seorang Sysadmin, sebelum mulai ke contoh kalian harus paham dulu konsep standard input (stdin), standard output (stdout) dan standard error (stderr) di Linux System.
+
+<br />
+
+> [!NOTE]
+> Sedikit perkenalan sama yang namanya file descriptor, intinya begini 0 itu melambangkan stdin, 1 stdout, dan 2 stderr, gak usah bingung cukup tau ini aja.
+
+<br />
+
+![](assets/Pasted%20image%2020240803100206.png)
+
+**STDIN, STDOUT, & STDERR** 
+Simplenya gini ketika kalian mengetikan command di Terminal di background Linux System akan memproses command tersebut kedalam stdin #0, dan stdout #1 akan melakan tugasnya untuk menampilkan hasil dari command kalian ke layar, jika input kalian asal asal, tidak sesuai atau tidak logis, maka tugasnya si stderr #2 buat menampilkan message error nya ke kalian.
+
+Jadi flow nya gini:
+```
+Kalian input command di terminal > stdin menerima input > diforward ke stdout jika sukses atau ke stderr jika error.
+```
+
+Langsung aja kita ke contoh - contoh command dibawah ini.
+
+**Output Redirection**
+
+```bash
+# Redirect command menjadi sebuah file
+whoami > profile.txt
+cat profile.txt
+
+# result: ubuntu
+```
+
+```bash
+# Membuat teks langsung di CLI tanpa teks editor seperti nano/vim
+echo "Hello World!" > hello-world.txt
+cat hello-world.txt
+
+# result: Hello World!
+```
+
+```bash
+# Menambahkan teks ke paling belakang dan membuat newline di file (appending)
+echo "My name is John Doe!" >> hello-world.txt
+cat hello-world.txt
+
+# result: 
+# Hello World! 
+# My name is John Doe!
+```
+
+```bash
+# Sama seperti diatas tapi tidak dengan newline
+echo -n " Nice to meet you!" >> hello-world.txt
+
+# result: 
+# Hello World!
+# My name is John Doe! Nice to meet you!
+```
+
+<br />
+
+> [!NOTE]
+> Ada alternative echo command yaitu printf
+
+<br />
+
+```bash
+# Redirect error message ke file
+mkdir testerror
+rm testerror/ 2> error.txt
+cat error.txt
+
+# result: rm: cannot remove 'testerror/': Is a directory
+```
+
+```bash
+# Redirect both stdout and stderr
+cat nonexistingfile &> example.txt
+
+# result: cat: example.txt: No such file or directory
+```
+
+Command satu yang diatas ini agak tricky karena kalian gak bisa bedainnya, kalau kalian ketik command 'cat nonexistingfile' hasilnya akan sama, bedanya outputnya diredirect ke file example.txt, tapi yang terjadi di background itu seperti ini:
+
+What &> do:
+
+Redirection `&>` melakukan dua hal ini:
+
+1. **Redirected stdout**: Redirect stdout command ke file example.txt, tapi karena commadnya tidak menghasilkan output apapun (hanya error) stdoutnya jadi kosong.
+2. **Redirected stderr**: Stderr nya keredirect ke file example.txt, makanya ada message "cat: example.txt: No such file or directory"
+
+**Input Redirection**
+
+Input redirection tidak memiliki banyak utilitas dalam perintah dasar Linux. Perintah-perintah dasar lebih sering menerima input langsung dari pengguna atau dari file yang diberikan sebagai argument tanpa harus menggunakan '<'. Tapi, redirection input biasanya ditemukan dalam bash scripting (yang akan dibahas nanti). Dalam konteks ini, input redirection digunakan untuk mengotomatisasi proses dengan mengambil input dari file bash script.
+
+Contoh input redirection itu tidak banyak utility dalam command biasa:
+
+![](assets/utility-input.gif)
+
+Bisa dilihat tanpa menggunakan '<' hasilnya masih tetap sama.
+<br />
+
+### Pattern Matching
+
+"Pattern matching di Linux adalah konsep yang digunakan untuk mencocokkan pola teks dalam file atau output perintah. Ini sangat berguna saat kita ingin mencari atau memfilter data berdasarkan pola tertentu." --chatgpt 2k24.
+
+Simple nya gini sesuai dengan namanya yaitu Pattern dan Matching, fitur Linux System ini sangat sangat berguna buat para Sysadmin supaya bisa meringankan tugas mereka, langsung aja kita praktekan dibawah ini.
+<br />
+
+Table Wildcards
+
+|    Pattern    | Matches                                                                                                      |
+| :-----------: | ------------------------------------------------------------------------------------------------------------ |
+|      `*`      | Semua string, integer atau characters.                                                                       |
+|      `?`      | Hanya single character.                                                                                      |
+|    `[abc]`    | Semua character yang megandung didalam bracket.                                                              |
+|   `[!abc]`    | Semua character yang tidak ada didalam bracket.                                                              |
+|   `[^abc]`    | Sama seperti yang `[!abc]`.                                                                                  |
+| `[[:alpha:]]` | Semua character berdasarkan alpahbet.                                                                        |
+| `[[:lower:]]` | Semua character berdasarkan lowercase.                                                                       |
+| `[[:upper:]]` | Semua character berdasarkan uppercase.                                                                       |
+| `[[:alnum:]]` | Semua character berdasarkan digit.                                                                           |
+| `[[:punct:]]` | Semua printable character yang bukan space atau alphanumeric.                                                |
+| `[[:digit:]]` | Semua single digit dari 0 - 9.                                                                               |
+| `[[:space:]]` | Semua single white space character. Ini bisa jadi tabs, newlines, carriage returns, form feeds, atau spaces. |
+
+<br />
+
+Petama kita buat dulu beberapa files untuk dijadikan output ketika menggunakan Pattern Matching, klik [disini](assets/create-files.sh) dan copas code nya kemudian buat bash script dan execute scriptnya.
+
+![](assets/creating-files.gif)
+
+<br />
+
+> [!NOTE]
+> Perlu diketahui disection ini tidak akan menjelaskan tentang bash script, bash script punya section sendiri nantinya disini kita hanya mendemonstrasikan saja agar pembuatan files untuk kalian yang ingin mengikuti lebih simple.
+
+<br />
+
