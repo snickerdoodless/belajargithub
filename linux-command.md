@@ -43,19 +43,17 @@ Author: snickerdoodles
 ***
 ![](assets/linux.png)
 
-<br />
-
-<p style="text-align: justify;">Sedikit perkenalan untuk Operting System Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya OS. Dibandingkan dengan Windows yang bayar, Linux itu gratis (kecuali yang untuk enterprise seperti redhat) dan Linux juga opensource, yang artinya siapapun bisa buat Linux versinya sendiri. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut:</p> 
+Sedikit perkenalan untuk Operting System Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya OS. Dibandingkan dengan Windows yang bayar, Linux itu gratis (kecuali yang untuk enterprise seperti redhat) dan Linux juga opensource, yang artinya siapapun bisa buat Linux versinya sendiri. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut:
 
 [Linux Distribution](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg).
 
-<p style="text-align: justify;"Tapi jangan pusing, dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
+Tapi jangan pusing, dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
 
 Ada satu hal yang membedakan user Linux dan Windows yaitu penggunaan Terminal atau bisa disebut juga dengan Bash kalau di Windows itu sama seperti CMD/Powershell user Linux sudah pasti bisa pakai Windows tapi belum tentu sebaliknya.
 
 Tapi kalian tau gak kalo di komputer itu bisa di install komputer lagi?
 
-Ayo kita kenalan dengan Virtualisasi!</p> 🤖
+Ayo kita kenalan dengan Virtualisasi! 🤖
 
 ![](assets/vm-meme.png)
 
