@@ -1,7 +1,7 @@
 Contributor : 
 - snickerdoodless
-- 
-- 
+- mawlibrahim
+- mawanx
 
 > Learning with visual representation is easier than reading only-theoretical materials - snickerdoodles
 
@@ -102,7 +102,6 @@ Berikut adalah keuntungan utama menggunakan virtualisasi:
 -  **Mobilitas dan Migrasi**: Mudah buat bermigrasi dan minimalisirkan downtime.
 
 Sekarang, karena kalian sudah paham tentang Virtualisasi, ayo kita praktekan dengan mencoba membuat VM ubuntu di Multipass, let's goo!
-
 <br />
 
 ## Multipass
@@ -114,6 +113,7 @@ Sekarang kita akan belajar Ubuntu dengan menggunakan Multipass, jadi pada umumny
 > Kenapa pake Multipass? Kan ada yang lain kayak Vbox dan kawan-kawan.
 
 Karena kita hanya pakai Ubuntu aja jadi Multipass solusinya, lagipula Multipass itu lebih ringan, cepat, mudah dan fleksibel jadi kita memutuskan untuk memakai Multipass untuk modul kali ini, misalkan ingin menggunakan Hypervisor maka akan lebih ribet karena kita harus download OS nya terlebih dahulu dalam bentuk CD, ISO, ataupun VM yang sudah jadi, langsung aja cara install Multipass dibawah ini.
+
 <br />
 
 > [!NOTE]
@@ -137,6 +137,7 @@ Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/
 > Disini saya menggunakan CMD, kalian bebas bisa gunakan Terminal lain.
 
 <br />
+
 ### Launching Multipass
 
 Buat kalian yang masih belum biasa dengan Terminal cukup ikutin aja, nanti lama lama terbiasa 😉.
@@ -163,6 +164,7 @@ Kalian juga bisa melihat command-command lainnya dari Multipass dengan cara diba
 Seperti yang kalian lihat untuk mengetahui command-command dimultipass itu buat apa saja tinggal tambahkan `--help` di belakang command
 
 Nah, sekarang multipass kita sudah siap dipakai selanjutnya kita akan belajar tentang command-line let's go to next section!
+
 <br />
 
 # Command Line Interface
