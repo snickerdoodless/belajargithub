@@ -45,7 +45,9 @@ Author: snickerdoodles
 
 <br />
 
-Sedikit perkenalan untuk Operting System Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya OS. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut [Linux Distribution](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg).
+<p style="text-align: justify;">Sedikit perkenalan untuk Operting System Linux untuk kalian yang belum tahu apa itu Linux. Jadi intinya sama seperti Windows yang kalian pake, Linux itu salah satu dari banyaknya OS. Linux itu banyak gak cuman 1 kalau kalian penasaran bisa lihat di URL berikut.</p> 
+
+[Linux Distribution](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg).
 
 Tapi jangan pusing, dari segitu banyaknya versi dari Linux modul ini bakalan fokus pake yang versi Ubuntu aja.
 
