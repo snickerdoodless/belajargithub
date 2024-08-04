@@ -1,10 +1,11 @@
 Contributor : 
 - snickerdoodless
-- mawlibrahim
-- mawanx
+- 
+- 
 
 > Learning with visual representation is easier than reading only-theoretical materials - snickerdoodles
 
+Author: snickerdoodles
 # Chapter 1. Linux and Virtualization
 ***
 - [Introcution to Linux](#introduction-to-linux)
@@ -19,8 +20,8 @@ Contributor :
 		- [Linux Manpages](#linux-manpages)
 	- [Command Line Expansions](#command-line-expansions)
 		- [Redirection](#redirection)
-		- [Pattern Matching](#pattern-matching)
-		- [List Operator](#list-operator)
+		- [Pattern, Brace & Tilde Expansions](#pattern,-Brace-&-Tilde-Expansions)
+		- [Pipes & Command Separator](#pipes-&-command-separator)
 - [Multipass Mounting](#multipass-mounting)
 - VIM
 	- How to Master VIM
@@ -56,7 +57,6 @@ Ayo kita kenalan dengan Virtualisasi! 🤖
 
 ![](assets/vm-meme.png)
 
-[**Knowledge Test: Linux Operating System**](latihan/linux-operating-system-quiz.md)
 
 <br />
 
@@ -160,12 +160,9 @@ Kalian juga bisa melihat command-command lainnya dari Multipass dengan cara diba
 
 ![](assets/multipass-help.gif)
 
-Seperti yang kalian lihat untuk mengetahui command-command dimultipass itu buat apa saja tinggal tambahkan '--help' di belakang command
+Seperti yang kalian lihat untuk mengetahui command-command dimultipass itu buat apa saja tinggal tambahkan `--help` di belakang command
 
 Nah, sekarang multipass kita sudah siap dipakai selanjutnya kita akan belajar tentang command-line let's go to next section!
-
-[**Knowledge Test: Virtualization**](latihan/virtualization-system-quiz.md)
-
 <br />
 
 # Command Line Interface
@@ -195,7 +192,7 @@ ipconfig --all
 <br />
 
 > [!NOTE]
-> Buat kalian yang bingung flag itu apa jadi disetiap command itu pasti punya flag, flag itu bakal diketik dengan character - atau -- contohnya seperti --help di section Multipass
+> Buat kalian yang bingung flag itu apa jadi disetiap command itu pasti punya flag, flag itu bakal diketik dengan character `-` atau `--` contohnya seperti `--help` di section Multipass
 
 <br />
 
@@ -215,6 +212,13 @@ Santai dulu kalian gak usah pahamin dulu perintah diatas buat apa nanti kita bah
 ## Basic Commands
 
 Semua pasti berawal dari basic, disection ini kita bakal belajar perintah-perintah dasar Linux mulai dari bagaimana caranya navigasi di Linux sistem, membuat file atau folder, menghapus file & folder, dan juga membaca manual tentang perintah perintah dasar di Linux, langsung aja yang pertama kita akan belajar cara navigasi di Linux System.
+
+Untuk mempraktekan command-command yang akan kita pelajari, kita bakalan menggunakan Multipass yang sudah di install, langsung aja ketik command dibawah ini.
+
+```bash
+multipass shell ubuntu-instance
+```
+
 
 ### Navigating Linux System
 
@@ -263,12 +267,12 @@ Gimana? paham nggak? gampang kan, itu adalah perintah basic Linux buat navigasi 
 
 ### Managing Files & Folder
 
-Untuk manage file atau folder pada Linux System bisa menggunakan perintah mkdir, touch, file, cat, nano atau vim, Tanpa basa - basi kalian bisa ikuti perintahnya dibawah ini.
+Untuk manage file atau folder pada Linux System bisa menggunakan perintah `mkdir`, `touch`, `file`, `cat`, `grep` dan `nano`, tanpa basa - basi kalian bisa ikuti perintahnya dibawah ini.
 
 <br />
 
 > [!NOTE]
->  Untuk cara menggunakan VIM akan dibahas di next section, sekarang kita hanya menggunakan nano.
+>  Untuk cara menggunakan `vim` akan dibahas di next section, sekarang kita hanya menggunakan `nano`.
 
 <br />
 
@@ -280,14 +284,12 @@ touch testfile.txt
 ```bash
 # Melihat file dilokasi saat ini
 ls 
-
 # result: reportping.txt testfile.txt
 ```
 
 ```bash
 # Mengidentifikasi tipe file
 file testfile.txt
-
 # resutl: testfile.txt: ASCII text
 ```
 
@@ -302,25 +304,28 @@ CTRL + X ENTER Y TO SAVE & EXIT
 ```bash
 # Melihat isi konten sebuah file
 cat testfile.txt
-
 # result: Hello World!
 ```
 
-Dan kalian bisa langsung membuat file langsung dengan nano tanpa 'touch' command terlebih dahulu.
+Dan kalian bisa langsung membuat file langsung dengan nano tanpa `touch` command terlebih dahulu.
+
+```bash
+# Mengambil kata spesifik dari sebuah file
+grep "World!" testfile.txt
+# result: hello World! < diterminal hasilnya akan terhighlight 
+```
 
 ```bash
 # Membuat folder kosong
 mkdir testfolder
 ls -p
-
 # result: reportping.txt testfile.txt testfolder/
 ```
 
-Kalian notice tanda '/' di Linux System itu menandakan bahwa itu adalah sebuah folder, untuk mengkonfirmasi nya kalian bisa melihat peritah dibawah ini.
+Kalian notice tanda `/` di Linux System itu menandakan bahwa itu adalah sebuah folder, untuk mengkonfirmasi nya kalian bisa melihat peritah dibawah ini.
 
 ```bash
 ls -la
-
 # result:
 total 48
 drwxr-x--- 6 ubuntu ubuntu 4096 Aug  2 09:05 .
@@ -338,29 +343,31 @@ drwx------ 2 ubuntu ubuntu 4096 Jul 31 19:55 .ssh
 drwxrwxr-x 2 ubuntu ubuntu 4096 Aug  2 09:05 testfolder
 ```
 
-Kalian bisa abaikan saja yang lain dan fokus hanya pada testfolder, bisa kalian lihat dipaling awal kiri testfolder itu terdapat character 'd' di Linux System itu menandakan bahwa itu adalah sebuah directory/folder.
+Kalian bisa abaikan saja yang lain dan fokus hanya pada testfolder, bisa kalian lihat dipaling awal kiri testfolder itu terdapat character `d` di Linux System itu menandakan bahwa itu adalah sebuah directory/folder.
 
 <br />
 
 > [!NOTE]
->  Just a quick note, buat kalian yang bingung apa tuh rwxrwxrwx ini sebenernya berkaitan dengan Linux File Permission dan ini akan panjang jika dibahas, simplenya gini r = read, w = write, x = execute dan character '-' itu menandakan no permission alias tidak ada izin, also as you can see ada nama ubuntu di testfolder dan testfile yang artinya mereka berdua punya user ubuntu.
+>  Just a quick note, buat kalian yang bingung apa tuh rwxrwxrwx ini sebenernya berkaitan dengan Linux File Permission dan ini akan panjang jika dibahas, simplenya gini `r = read`, `w = write`, `x = execute` dan character `-` itu menandakan no permission alias tidak ada izin, also as you can see ada nama ubuntu di testfolder dan testfile yang artinya mereka berdua punya user ubuntu.
 
 <br />
 
-Kalian juga bisa identifikasi folder menggunakan perintah 'file' seperti file diatas.
+Kalian juga bisa identifikasi folder menggunakan perintah `file` seperti file diatas.
 
 ```bash
 # Memindahkan file ke dalam folder
 mv testfile testfolder/
-ls testfolder/
 
+ls testfolder/
 # result: testfile.txt
 ```
 
 ```bash
 # Copy file dari direktori testfolder/ ke /home/ubuntu
 cp testfolder/testfile.txt /home/ubuntu
+
 # atau
+
 cp testfolder/testfile.txt . # titik melambangkan posisi folder saat ini
 ls -R
 
@@ -382,24 +389,21 @@ nano /tmp/tempfile.txt
 # Menghapus file 
 rm reportping.txt
 ls
-
 # result: testfile.txt testfolder
 ```
 
 ```bash
 # Menghapus folder
 rmdir testfolder/
-
 # result: rmdir: failed to remove 'testfolder/': Directory not empty
 ```
 
-Bisa kalian lihat kalau menghapus folder menggunakan 'rmdir' itu tidak bisa, karena 'rmdir' hanya untuk menghapus folder/directory kosong.
+Bisa kalian lihat kalau menghapus folder menggunakan `rmdir` itu tidak bisa, karena `rmdir` hanya untuk menghapus folder/directory kosong.
 
 ```bash
 # Menghapus folder dengan paksa
 rm -rf testfolder/
 ls
-
 # result: testfile.txt
 ```
 
@@ -407,11 +411,10 @@ ls
 # Menghapus folder dan file bersamaan
 mkdir testfolder/
 ls
-
 # result: testfile.txt testfolder
+
 rm -rf testfolder/ testfile.txt
 ls
-
 # result: 
 ```
 
@@ -419,7 +422,7 @@ Sampai sini paham? kalau belum paham santai next section kita bakal bahas tentan
 
 ## Linux Manpages
 
-Kalau kalian merasa kurang mengerti gunanya berbagai flag dalam sebuah command walaupun sudah pakai trick '--help' kalian jangan bingung, Linux sendiri punya official documentation untuk masing masing command yang kalian ingin ketahui, jadi section kali ini gak akan panjang-panjang karena yang akan dibahas sangat simple yaitu gimana caranya membaca dokumentasi dari sebuah command di Linux System, langsung aja dibawah ini.
+Kalau kalian merasa kurang mengerti gunanya berbagai flag dalam sebuah command walaupun sudah pakai trick `--help` kalian jangan bingung, Linux sendiri punya official documentation untuk masing masing command yang kalian ingin ketahui, jadi section kali ini gak akan panjang-panjang karena yang akan dibahas sangat simple yaitu gimana caranya membaca dokumentasi dari sebuah command di Linux System, langsung aja dibawah ini.
 
 ```bash
 # Untuk melihat manual pada sebuah command
@@ -428,29 +431,29 @@ man (command yang ingin dipelajari)
 
 ![](assets/man-command.gif)
 
-Seperti gambar diatas kalian juga bisa berinteraksi dan navigasi saat membaca manual dari man command pencet 'q' untuk quit dan pencet 'h' untuk guide cara berinteraksi di man interface. Selain dari man command kalian juga bisa gunakan man lewat google, caranya klik [disini](https://man7.org/linux/man-pages/) dan cari command apa yang kalian mau lihat.
+Seperti gambar diatas kalian juga bisa berinteraksi dan navigasi saat membaca manual dari `man` command pencet `q` untuk quit dan pencet `h` untuk guide cara berinteraksi di man interface. Selain dari `man` command kalian juga bisa gunakan `man` lewat google, caranya klik [disini](https://man7.org/linux/man-pages/) dan cari command apa yang kalian mau lihat.
 <br />
 
 Table lengkap cara navigasi man interface:
 
-| Command   | Result                                  |
-| --------- | --------------------------------------- |
-| Spacebar  | Scroll kebawah dengan melompat selayar  |
-| DownArrow | Scroll kebawah satu persatu             |
-| UpArrow   | Scroll keatas satu persatu              |
-| D         | Scroll kebawah melompat setengah layar  |
-| U         | Scroll keatas melompat setengah layar   |
-| /string   | Untuk mencari suatu kata atau paragraph |
-| N         | Kembali ke pencarian sebelumnya         |
-| Shift+N   | Kembali ke pencarian semula             |
-| G         | Pergi ke start manpage                  |
-| Shift+G   | Pergi ke end manpage                    |
-| Q         | Keluar dari manpage interface           |
+| Command     | Result                                  |
+| ----------- | --------------------------------------- |
+| `Spacebar`  | Scroll kebawah dengan melompat selayar  |
+| `DownArrow` | Scroll kebawah satu persatu             |
+| `UpArrow`   | Scroll keatas satu persatu              |
+| `D`         | Scroll kebawah melompat setengah layar  |
+| `U`         | Scroll keatas melompat setengah layar   |
+| `/string`   | Untuk mencari suatu kata atau paragraph |
+| `N`         | Kembali ke pencarian sebelumnya         |
+| `Shift+N`   | Kembali ke pencarian semula             |
+| `G`         | Pergi ke start manpage                  |
+| `Shift+G`   | Pergi ke end manpage                    |
+| `Q`         | Keluar dari manpage interface           |
 
 <br />
 
 > [!NOTE]
-> Ada alternative man command yaitu info command, bedanya info itu lebih complete dan lengkapp hingga penjelasan dan contoh dari setiap flag intinya seperti full documentation dari sebuah command, tapi info command sudah tidak dimaintain lagi dikarenakan sudah tidak terlalu relevan dan digantikan dengan man command.
+> Ada alternative man command yaitu `info` command, bedanya `info` itu lebih complete dan lengkapp hingga penjelasan dan contoh dari setiap flag intinya seperti full documentation dari sebuah command, tapi `info` command sudah tidak dimaintain lagi dikarenakan sudah tidak terlalu relevan dan digantikan dengan `man` command.
 
 <br />
 
@@ -463,19 +466,19 @@ Bingung kan? gapapa kita langsung masuk ke contoh disection berikutnya.
 
 ### Redirection
 
-Kalian sadar gak disection atas yang membahas CLI dan Argument disalah satu contoh command nya ada yang menggunakan character '>', ternyata itu ada guna nya lohh, seperti judul section yaitu redirection kegunaan character seperti '>' (output redirection), '< (input redirection)', '&' (both redirection), adalah fitur Linux yang keren buat mempermudah seorang Sysadmin, sebelum mulai ke contoh kalian harus paham dulu konsep standard input (stdin), standard output (stdout) dan standard error (stderr) di Linux System.
+Kalian sadar gak disection atas yang membahas CLI dan Argument disalah satu contoh command nya ada yang menggunakan character `>`, ternyata itu ada guna nya lohh, seperti judul section yaitu redirection kegunaan character seperti `>` (output redirection), `<` (input redirection), `&` (both redirection), adalah fitur Linux yang keren buat mempermudah seorang Sysadmin, sebelum mulai ke contoh kalian harus paham dulu konsep standard input (stdin), standard output (stdout) dan standard error (stderr) di Linux System.
 
 <br />
 
 > [!NOTE]
-> Sedikit perkenalan sama yang namanya file descriptor, intinya begini 0 itu melambangkan stdin, 1 stdout, dan 2 stderr, gak usah bingung cukup tau ini aja.
+> Sedikit perkenalan sama yang namanya file descriptor, intinya begini `0` itu melambangkan stdin, `1` stdout, dan `2` stderr, gak usah bingung cukup tau ini aja.
 
 <br />
 
-![](assets/Pasted%20image%2020240803100206.png)
+![](assets/stdin-stdout-stderr.png)
 
 **STDIN, STDOUT, & STDERR** 
-Simplenya gini ketika kalian mengetikan command di Terminal di background Linux System akan memproses command tersebut kedalam stdin #0, dan stdout #1 akan melakan tugasnya untuk menampilkan hasil dari command kalian ke layar, jika input kalian asal asal, tidak sesuai atau tidak logis, maka tugasnya si stderr #2 buat menampilkan message error nya ke kalian.
+Simplenya gini ketika kalian mengetikan command di Terminal di background Linux System akan memproses command tersebut kedalam `stdin #0`, dan `stdout #1` akan melakan tugasnya untuk menampilkan hasil dari command kalian ke layar, jika input kalian asal asal, tidak sesuai atau tidak logis, maka tugasnya si `stderr #2` buat menampilkan message error nya ke kalian.
 
 Jadi flow nya gini:
 ```
@@ -490,7 +493,6 @@ Langsung aja kita ke contoh - contoh command dibawah ini.
 # Redirect command menjadi sebuah file
 whoami > profile.txt
 cat profile.txt
-
 # result: ubuntu
 ```
 
@@ -498,7 +500,6 @@ cat profile.txt
 # Membuat teks langsung di CLI tanpa teks editor seperti nano/vim
 echo "Hello World!" > hello-world.txt
 cat hello-world.txt
-
 # result: Hello World!
 ```
 
@@ -506,7 +507,6 @@ cat hello-world.txt
 # Menambahkan teks ke paling belakang dan membuat newline di file (appending)
 echo "My name is John Doe!" >> hello-world.txt
 cat hello-world.txt
-
 # result: 
 # Hello World! 
 # My name is John Doe!
@@ -515,7 +515,6 @@ cat hello-world.txt
 ```bash
 # Sama seperti diatas tapi tidak dengan newline
 echo -n " Nice to meet you!" >> hello-world.txt
-
 # result: 
 # Hello World!
 # My name is John Doe! Nice to meet you!
@@ -524,7 +523,7 @@ echo -n " Nice to meet you!" >> hello-world.txt
 <br />
 
 > [!NOTE]
-> Ada alternative echo command yaitu printf
+> Ada alternative `echo` command yaitu `printf`
 
 <br />
 
@@ -533,38 +532,38 @@ echo -n " Nice to meet you!" >> hello-world.txt
 mkdir testerror
 rm testerror/ 2> error.txt
 cat error.txt
-
 # result: rm: cannot remove 'testerror/': Is a directory
 ```
 
 ```bash
 # Redirect both stdout and stderr
 cat nonexistingfile &> example.txt
-
 # result: cat: example.txt: No such file or directory
 ```
 
-Command satu yang diatas ini agak tricky karena kalian gak bisa bedainnya, kalau kalian ketik command 'cat nonexistingfile' hasilnya akan sama, bedanya outputnya diredirect ke file example.txt, tapi yang terjadi di background itu seperti ini:
+Command satu yang diatas ini agak tricky karena kalian gak bisa bedainnya, kalau kalian ketik command `cat nonexistingfile` hasilnya akan sama, bedanya outputnya diredirect ke file `example.txt`, tapi yang terjadi di background itu seperti ini:
 
-What &> do:
+What `&>` do:
 
 Redirection `&>` melakukan dua hal ini:
 
-1. **Redirected stdout**: Redirect stdout command ke file example.txt, tapi karena commadnya tidak menghasilkan output apapun (hanya error) stdoutnya jadi kosong.
-2. **Redirected stderr**: Stderr nya keredirect ke file example.txt, makanya ada message "cat: example.txt: No such file or directory"
+1. **Redirected stdout**: Redirect `stdout` command ke file `example.txt`, tapi karena commadnya tidak menghasilkan output apapun (hanya error) stdoutnya jadi kosong.
+2. **Redirected stderr**: `stderr` nya keredirect ke file `example.txt`, makanya ada message `cat: example.txt: No such file or directory`
 
 **Input Redirection**
 
-Input redirection tidak memiliki banyak utilitas dalam perintah dasar Linux. Perintah-perintah dasar lebih sering menerima input langsung dari pengguna atau dari file yang diberikan sebagai argument tanpa harus menggunakan '<'. Tapi, redirection input biasanya ditemukan dalam bash scripting (yang akan dibahas nanti). Dalam konteks ini, input redirection digunakan untuk mengotomatisasi proses dengan mengambil input dari file bash script.
+Input redirection tidak memiliki banyak utilitas dalam perintah dasar Linux. Perintah-perintah dasar lebih sering menerima input langsung dari pengguna atau dari file yang diberikan sebagai argument tanpa harus menggunakan `<`. Tapi, redirection input biasanya ditemukan dalam bash scripting (yang akan dibahas nanti). Dalam konteks ini, input redirection digunakan untuk mengotomatisasi proses dengan mengambil input dari file bash script.
 
 Contoh input redirection itu tidak banyak utility dalam command biasa:
 
 ![](assets/utility-input.gif)
 
-Bisa dilihat tanpa menggunakan '<' hasilnya masih tetap sama.
+Bisa dilihat tanpa menggunakan `<` hasilnya masih tetap sama.
 <br />
 
-### Pattern Matching
+### Pattern, Brace & Tilde Expansions
+
+###### **Pattern Matching**
 
 "Pattern matching di Linux adalah konsep yang digunakan untuk mencocokkan pola teks dalam file atau output perintah. Ini sangat berguna saat kita ingin mencari atau memfilter data berdasarkan pola tertentu." --chatgpt 2k24.
 
@@ -573,31 +572,211 @@ Simple nya gini sesuai dengan namanya yaitu Pattern dan Matching, fitur Linux Sy
 
 Table Wildcards
 
-|    Pattern    | Matches                                                                                                      |
-| :-----------: | ------------------------------------------------------------------------------------------------------------ |
-|      `*`      | Semua string, integer atau characters.                                                                       |
-|      `?`      | Hanya single character.                                                                                      |
-|    `[abc]`    | Semua character yang megandung didalam bracket.                                                              |
-|   `[!abc]`    | Semua character yang tidak ada didalam bracket.                                                              |
-|   `[^abc]`    | Sama seperti yang `[!abc]`.                                                                                  |
-| `[[:alpha:]]` | Semua character berdasarkan alpahbet.                                                                        |
-| `[[:lower:]]` | Semua character berdasarkan lowercase.                                                                       |
-| `[[:upper:]]` | Semua character berdasarkan uppercase.                                                                       |
-| `[[:alnum:]]` | Semua character berdasarkan digit.                                                                           |
-| `[[:punct:]]` | Semua printable character yang bukan space atau alphanumeric.                                                |
-| `[[:digit:]]` | Semua single digit dari 0 - 9.                                                                               |
-| `[[:space:]]` | Semua single white space character. Ini bisa jadi tabs, newlines, carriage returns, form feeds, atau spaces. |
+| Pattern | Matches                                |
+| :-----: | -------------------------------------- |
+|   `*`   | Semua string, integer atau characters. |
+|   `?`   | Hanya single character.                |
+|  `!()`  | Tidak termasuk didalam bracket         |
 
 <br />
+Petama kita buat dulu beberapa random files untuk dijadikan contoh output ketika menggunakan Pattern Matching, biar gak ribet copas aja codenya dibawah ini kemudian paste di Terminal dengan klik kanan.
 
-Petama kita buat dulu beberapa files untuk dijadikan output ketika menggunakan Pattern Matching, klik [disini](assets/create-files.sh) dan copas code nya kemudian buat bash script dan execute scriptnya.
+```bash
+touch file1.txt file2.txt file0.txt report.txt revshell.php notes.txt data.xlsx suratcintauntuknya.eml
+```
 
-![](assets/creating-files.gif)
+Contoh penggunaan pattern match:
+
+```bash
+# List semua file yang berakhiran .txt
+ls *.txt
+# result: file0.txt  file1.txt  file2.txt  notes.txt  report.txt
+```
+
+```bash
+# List semua files yang ada huruf o nya
+ls *o*.txt
+# result: notes.txt report.txt
+```
+
+```bash
+# List semua files yang salah satu characternya tidak diketahui
+ls f?le?.txt # length characternya harus sama kalau mau pake ?
+# result: file0.txt  file1.txt  file2.txt
+# ls f?le? ⬅️ tidak akan bisa
+```
+
+```bash
+# Mengecualikan file .txt
+ls !(*.txt)
+# result: data.xlsx  revshell.php  suratcintauntuknya.eml
+```
+
+
+###### **Brace Expansions**
+
+Brace expansion adalah fitur di bash shell yang memungkinkan kalian untuk membuat sebuah list strings dengan cara pattern expanding, intinya shortcut untuk list suatu strings, contohnya seperti ini `{a,b,c}`, dikonteks Linux command biasanya brace expansion digunakan buat managing huge amount of files or some bash scripting stuff.
+
+```bash
+# Membuat list file kosong dari 1 - 5
+touch file{1,2,3,4,5}
+
+# atau
+
+touch file{1..5} # .. hanya berlaku untuk angka dan alphabet
+ls
+# result: file1 file2 file3 file4 file5
+```
+
+```bash
+# Membuat folder berdasarkan tahun
+mkdir report{2020..2025}
+ls
+# result: 
+report2020/ report2021/ report2022/ report2023/ report2024/ report2025/
+```
+
+```bash
+# Membuat file dengan nama dan nomor
+touch client_{Abdur,Baim,KS}{1..3}.txt
+# result: client_Abdur1.txt client_Baim2.txt client_KS3.txt
+```
+
+```bash
+# Membuat file nested recursive
+touch file{a{1..2},b,c}.txt
+# result: filea1.txt filea2.txt fileb.txt filec.txt
+```
+
+
+###### **Tilde Expansions**
+
+Karakter tilde `~`, matching sama direktori home user saat ini.
+
+Lihat gambar dibawah ini:
+
+![](assets/tilde-expansion.gif)
+
+Seperti yang kalian lihat character `~` melambangkan home directory dari user ubuntu.
+<br />
+
+### Pipes & Command Separator
+
+Oke untuk last section Command Line Interface akan membahas fitur keren Linux ini yaitu semacam seperti escaping command, intinya nanti kalian bisa menjalankan berbagai command (multiple command) dalam sekali tekan tombol enter, langsung aja contohnya dibawah ini.
+
+###### Pipes
+
+```bash
+# Menggunakan pipes untuk execute multiple commands
+cd /tmp | touch tempfile.txt | ls
+# result: tempfile.txt
+
+cat /etc/passwd | grep ubuntu > profile.txt | ls
+# result: tempfile.txt profile.txt
+```
+
+```bash
+# Menggunakan double pipes untuk execute salah satu command
+mkdir /tmp || mkdir ~/tmp
+# result: mkdir: cannot create directory ‘/tmp’: File exists
+ls
+# result: tmp/
+```
 
 <br />
 
 > [!NOTE]
-> Perlu diketahui disection ini tidak akan menjelaskan tentang bash script, bash script punya section sendiri nantinya disini kita hanya mendemonstrasikan saja agar pembuatan files untuk kalian yang ingin mengikuti lebih simple.
+>  Double pipes || sebenernya di Linux itu adalah OR logical operator 
 
 <br />
 
+###### Command Separator
+
+```bash
+# Menggunakan command separator untuk execute multiple command juga
+mkdir /tmp/notes/ ; touch notes.txt ; mv notes.txt /tmp/notes ; ls /tmp/notes/
+# result: notes.txt
+```
+
+<br />
+
+> Bedanya sama pipes apa?
+
+Jadi bedanya pipes dan command separator yaitu pipes biasanya digunakan untuk passing output dari sebuah command untuk dijadikan input ke command lainnya, sedangkan command separator itu mengeksekusi command secara sequential atau berurutan. lihat command dibawah untuk bedainnnya.
+
+```bash
+# Pipes
+echo -e "line1\nline2\nline3" | wc -l
+# result: 3
+```
+
+```bash
+# Command separator
+echo -e "line1\nline2\nline3"; wc -l
+# result:
+line1
+line2
+line3
+0
+```
+
+Gimana? sampai sini sudah paham dan terbiasa tentang CLI & Command Linux gak? kalo sudah horee! kalian resmi gabung menjadi Linux nerds 🤓 dan sekali lagi maju satu langkah menjadi seorang DevOps, Mungkin untuk cara penggunaan command-command di Linux sampai sini aja karena kita selanjutnya akan membahas bagaimana cara mounting di Multipass.
+<br />
+
+> Apa tuh mounting?
+
+Santai di next section bakal dijelaskan dan kegunaannya juga buat apa, tanpa basa-basi let's goo!
+
+<br />
+
+# Multipass Mounting
+
+Kalian tau gak walaupun virtualization itu sharing resource antar host dan virtual machine, tapi mereka itu gak sharing data dan informasi lohh kayak files & folder, nah ini tuh menjadi masalah utama kalau seandainya kita butuh data atau informasi penting entah dari host ke vm atau sebaliknya, makanya kali ini team komandro bakalan ngajarin caranya sharing data di multipass dengan cara mounting storage kalian dari host ke vm agar bisa sharing data, tanpa lama-lama let's go ke tutorialnya dibawah ini.
+
+1. . Pastikan multipass instance nya running seperti digambar ini.
+ 
+ ![](assets/mount-multipass1.png)
+
+2. Tentukan folder yang akan dibuat untuk sharing data kalian di host.
+3. Buat foldernya dan berikan namanya tanpa spasi untuk memudahkan kalian.
+
+![](assets/mount-multipass2.gif)
+
+5. Jika sudah balik lagi ke CMD/Powershell dan ketikan command dibawah ini.
+
+```cmd
+multipass set local.privileged-mounts=true
+```
+
+> [!WARNING]
+> Command `multipass set local.privileged-mounts=true` rentan terhadap teknik priviledge escalation, dalam sebuah company pakai mounting jika kalian butuh saja dan jika sudah selesai disable mounting kalian.
+
+<br />
+
+5. Next, jalankan perintah dibawah ini untuk mount folder share kalian ke instance kalian (sesuaikan path folder kalian).
+
+```cmd
+multipass mount D:\Sharing ubuntu-instance:/home/ubuntu/shares
+```
+
+6. Cek status mounting seperti dibawah ini.
+
+![](assets/mount-multipass3.png)
+
+7. Test mountingnya dengan cara buat/copy file di folder mounting kalian seperti dibawah ini.
+
+![](assets/mount-multipass4.gif)
+
+8. Jika kalian sudah selesai untuk mountingnya silahkankan unmount kembali folder nya dengan ikuti command dibawah ini.
+
+```bash
+multipass unmount ubuntu-instance
+multipass set local.privileged-mounts=false
+```
+
+Selamat kalian sudah sejauh ini belajar dan sekali lagi maju satu langkah untuk menjadi seorang DevOps 🥳, saya harap kalian semangatnya nya masih membakar dan ingin terus berkembang lagi karena di section selanjutnya kalian akan belajar cara ngoding dengan menggunakan bash scripting language di vim, LET'S GOO!!
+
+<br />
+
+Author: mawlibrahim
+# VIM
