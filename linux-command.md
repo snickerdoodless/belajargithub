@@ -74,8 +74,6 @@ Coba lihat gambar berikut:
 
 ![](assets/virtualization-infrastructure.png)
 
-<br />
-
 Simpelnya gini,
 
 Operating System pada umumnya
@@ -115,25 +113,14 @@ Karena kita hanya pakai Ubuntu aja jadi Multipass solusinya, lagipula Multipass 
 
 <br />
 
-> [!NOTE]
-> Modul ini menggunakan Windows untuk menginstall Multipass, kalau kalian pake Linux silahkan menyesuaikan saja.
-
-<br />
-
 ### Installing Multipass
 
 Klik link [ini](https://multipass.run/install) dan pilih Windows untuk download.
-
 Setelah terdownload buka Multipass installernya lalu klik next aja terus hingga selesai.
 
 ![](assets/installing-multipass.gif)
 
 Next buka Windows terminal dengan cara pencet logo Windows + R terus ketik (CMD/Powershell).
-
-<br />
-
-> [!NOTE]
-> Disini saya menggunakan CMD, kalian bebas bisa gunakan Terminal lain.
 
 <br />
 
@@ -155,6 +142,13 @@ Untuk remote execution command
 ```bash
 multipass exec ubuntu-instance whoami
 ```
+
+<br />
+
+> [!NOTE]
+> Disini saya menggunakan CMD, kalian bebas bisa gunakan Terminal lain.
+
+<br />
 
 Kalian juga bisa melihat command-command lainnya dari Multipass dengan cara dibawah ini.
 
@@ -220,6 +214,7 @@ Untuk mempraktekan command-command yang akan kita pelajari, kita bakalan menggun
 multipass shell ubuntu-instance
 ```
 
+<br />
 
 ### Navigating Linux System
 
@@ -266,6 +261,8 @@ pwd
 
 Gimana? paham nggak? gampang kan, itu adalah perintah basic Linux buat navigasi atau berpindah pindah folder/direktori, kalau di Windows itu tinggal pencet ⬅️ atau ➡️ arrow untuk berpindah pindah tempat direktori kalian. Next kita bakal belajar cara membuat direktori dan file.
 
+<br />
+
 ### Managing Files & Folder
 
 Untuk manage file atau folder pada Linux System bisa menggunakan perintah `mkdir`, `touch`, `file`, `cat`, `grep` dan `nano`, tanpa basa - basi kalian bisa ikuti perintahnya dibawah ini.
@@ -300,6 +297,7 @@ nano testfile.txt
 ```
 
 ![](assets/nano-command.gif)
+
 CTRL + X ENTER Y TO SAVE & EXIT
 
 ```bash
@@ -421,6 +419,8 @@ ls
 
 Sampai sini paham? kalau belum paham santai next section kita bakal bahas tentang dokuentasi dari sebuah perintah agar kalian bisa lebih paham tapi kalau kalian sudah paham, selamat kalian adalah calon-calon Linux System Administrator dan satu langkah maju menuju seorang DevOps, horee!! 🥳. 
 
+<br />
+
 ## Linux Manpages
 
 Kalau kalian merasa kurang mengerti gunanya berbagai flag dalam sebuah command walaupun sudah pakai trick `--help` kalian jangan bingung, Linux sendiri punya official documentation untuk masing masing command yang kalian ingin ketahui, jadi section kali ini gak akan panjang-panjang karena yang akan dibahas sangat simple yaitu gimana caranya membaca dokumentasi dari sebuah command di Linux System, langsung aja dibawah ini.
@@ -433,7 +433,6 @@ man (command yang ingin dipelajari)
 ![](assets/man-command.gif)
 
 Seperti gambar diatas kalian juga bisa berinteraksi dan navigasi saat membaca manual dari `man` command pencet `q` untuk quit dan pencet `h` untuk guide cara berinteraksi di man interface. Selain dari `man` command kalian juga bisa gunakan `man` lewat google, caranya klik [disini](https://man7.org/linux/man-pages/) dan cari command apa yang kalian mau lihat.
-<br />
 
 Table lengkap cara navigasi man interface:
 
@@ -459,15 +458,17 @@ Table lengkap cara navigasi man interface:
 <br />
 
 ## Command Line Expansions
+***
 
 Command line expansions yaitu fitur shell bawaan dari Linux System yang memungkinkan kalian bisa manipulate and expanding sebuah command, file names, dan directory di CLI kalian, fitur ini bisa digunakan untuk shortcut, patterns, variables untuk men-spesifikan sebuah files, directory atau commands lainnya. 
 
 Bingung kan? gapapa kita langsung masuk ke contoh disection berikutnya.
+
 <br />
 
 ### Redirection
 
-Kalian sadar gak disection atas yang membahas CLI dan Argument disalah satu contoh command nya ada yang menggunakan character `>`, ternyata itu ada guna nya lohh, seperti judul section yaitu redirection kegunaan character seperti `>` (output redirection), `<` (input redirection), `&` (both redirection), adalah fitur Linux yang keren buat mempermudah seorang Sysadmin, sebelum mulai ke contoh kalian harus paham dulu konsep standard input (stdin), standard output (stdout) dan standard error (stderr) di Linux System.
+Kalian sadar gak disection atas yang membahas CLI dan Argument disalah satu contoh command nya ada yang menggunakan character `>`, ternyata itu ada guna nya lohh, seperti judul section yaitu redirection kegunaan character seperti `>` (output redirection), `<` (input redirection) dan terakhir`&` (both redirection), adalah fitur Linux yang keren buat mempermudah seorang Sysadmin, sebelum mulai ke contoh kalian harus paham dulu konsep standard input (stdin), standard output (stdout) dan standard error (stderr) di Linux System.
 
 <br />
 
@@ -479,6 +480,7 @@ Kalian sadar gak disection atas yang membahas CLI dan Argument disalah satu cont
 ![](assets/stdin-stdout-stderr.png)
 
 **STDIN, STDOUT, & STDERR** 
+
 Simplenya gini ketika kalian mengetikan command di Terminal di background Linux System akan memproses command tersebut kedalam `stdin #0`, dan `stdout #1` akan melakan tugasnya untuk menampilkan hasil dari command kalian ke layar, jika input kalian asal asal, tidak sesuai atau tidak logis, maka tugasnya si `stderr #2` buat menampilkan message error nya ke kalian.
 
 Jadi flow nya gini:
@@ -560,18 +562,18 @@ Contoh input redirection itu tidak banyak utility dalam command biasa:
 ![](assets/utility-input.gif)
 
 Bisa dilihat tanpa menggunakan `<` hasilnya masih tetap sama.
+
 <br />
 
 ### Pattern, Brace & Tilde Expansions
 
-###### **Pattern Matching**
+**Pattern Matching**
 
 "Pattern matching di Linux adalah konsep yang digunakan untuk mencocokkan pola teks dalam file atau output perintah. Ini sangat berguna saat kita ingin mencari atau memfilter data berdasarkan pola tertentu." --chatgpt 2k24.
 
 Simple nya gini sesuai dengan namanya yaitu Pattern dan Matching, fitur Linux System ini sangat sangat berguna buat para Sysadmin supaya bisa meringankan tugas mereka, langsung aja kita praktekan dibawah ini.
-<br />
 
-Table Wildcards
+Table Wildcards:
 
 | Pattern | Matches                                |
 | :-----: | -------------------------------------- |
@@ -579,8 +581,9 @@ Table Wildcards
 |   `?`   | Hanya single character.                |
 |  `!()`  | Tidak termasuk didalam bracket         |
 
-<br />
+
 Petama kita buat dulu beberapa random files untuk dijadikan contoh output ketika menggunakan Pattern Matching, biar gak ribet copas aja codenya dibawah ini kemudian paste di Terminal dengan klik kanan.
+
 
 ```bash
 touch file1.txt file2.txt file0.txt report.txt revshell.php notes.txt data.xlsx suratcintauntuknya.eml
@@ -614,7 +617,7 @@ ls !(*.txt)
 ```
 
 
-###### **Brace Expansions**
+**Brace Expansions**
 
 Brace expansion adalah fitur di bash shell yang memungkinkan kalian untuk membuat sebuah list strings dengan cara pattern expanding, intinya shortcut untuk list suatu strings, contohnya seperti ini `{a,b,c}`, dikonteks Linux command biasanya brace expansion digunakan buat managing huge amount of files or some bash scripting stuff.
 
@@ -650,7 +653,7 @@ touch file{a{1..2},b,c}.txt
 ```
 
 
-###### **Tilde Expansions**
+**Tilde Expansions**
 
 Karakter tilde `~`, matching sama direktori home user saat ini.
 
@@ -659,13 +662,14 @@ Lihat gambar dibawah ini:
 ![](assets/tilde-expansion.gif)
 
 Seperti yang kalian lihat character `~` melambangkan home directory dari user ubuntu.
+
 <br />
 
 ### Pipes & Command Separator
 
 Oke untuk last section Command Line Interface akan membahas fitur keren Linux ini yaitu semacam seperti escaping command, intinya nanti kalian bisa menjalankan berbagai command (multiple command) dalam sekali tekan tombol enter, langsung aja contohnya dibawah ini.
 
-###### Pipes
+**Pipes**
 
 ```bash
 # Menggunakan pipes untuk execute multiple commands
@@ -687,11 +691,11 @@ ls
 <br />
 
 > [!NOTE]
->  Double pipes || sebenernya di Linux itu adalah OR logical operator 
+>  Double pipes `||` sebenernya di Linux itu adalah OR logical operator 
 
 <br />
 
-###### Command Separator
+**Command Separator**
 
 ```bash
 # Menggunakan command separator untuk execute multiple command juga
@@ -722,6 +726,7 @@ line3
 ```
 
 Gimana? sampai sini sudah paham dan terbiasa tentang CLI & Command Linux gak? kalo sudah horee! kalian resmi gabung menjadi Linux nerds 🤓 dan sekali lagi maju satu langkah menjadi seorang DevOps, Mungkin untuk cara penggunaan command-command di Linux sampai sini aja karena kita selanjutnya akan membahas bagaimana cara mounting di Multipass.
+
 <br />
 
 > Apa tuh mounting?
@@ -731,19 +736,20 @@ Santai di next section bakal dijelaskan dan kegunaannya juga buat apa, tanpa bas
 <br />
 
 # Multipass Mounting
+***
 
 Kalian tau gak walaupun virtualization itu sharing resource antar host dan virtual machine, tapi mereka itu gak sharing data dan informasi lohh kayak files & folder, nah ini tuh menjadi masalah utama kalau seandainya kita butuh data atau informasi penting entah dari host ke vm atau sebaliknya, makanya kali ini team komandro bakalan ngajarin caranya sharing data di multipass dengan cara mounting storage kalian dari host ke vm agar bisa sharing data, tanpa lama-lama let's go ke tutorialnya dibawah ini.
 
-1. . Pastikan multipass instance nya running seperti digambar ini.
+**1. Pastikan multipass instance nya running seperti digambar ini.**
  
  ![](assets/mount-multipass1.png)
 
-2. Tentukan folder yang akan dibuat untuk sharing data kalian di host.
-3. Buat foldernya dan berikan namanya tanpa spasi untuk memudahkan kalian.
+**2. Tentukan folder yang akan dibuat untuk sharing data kalian di host.**
+**3. Buat foldernya dan berikan namanya tanpa spasi untuk memudahkan kalian.**
 
 ![](assets/mount-multipass2.gif)
 
-5. Jika sudah balik lagi ke CMD/Powershell dan ketikan command dibawah ini.
+**4. Jika sudah balik lagi ke CMD/Powershell dan ketikan command dibawah ini.**
 
 ```cmd
 multipass set local.privileged-mounts=true
@@ -754,21 +760,21 @@ multipass set local.privileged-mounts=true
 
 <br />
 
-5. Next, jalankan perintah dibawah ini untuk mount folder share kalian ke instance kalian (sesuaikan path folder kalian).
+**5. Next, jalankan perintah dibawah ini untuk mount folder share kalian ke instance kalian (sesuaikan path folder kalian).**
 
 ```cmd
 multipass mount D:\Sharing ubuntu-instance:/home/ubuntu/shares
 ```
 
-6. Cek status mounting seperti dibawah ini.
+**6. Cek status mounting seperti dibawah ini.**
 
 ![](assets/mount-multipass3.png)
 
-7. Test mountingnya dengan cara buat/copy file di folder mounting kalian seperti dibawah ini.
+**7. Test mountingnya dengan cara buat/copy file di folder mounting kalian seperti dibawah ini.**
 
 ![](assets/mount-multipass4.gif)
 
-8. Jika kalian sudah selesai untuk mountingnya silahkankan unmount kembali folder nya dengan ikuti command dibawah ini.
+**8. Jika kalian sudah selesai untuk mountingnya silahkankan unmount kembali folder nya dengan ikuti command dibawah ini.**
 
 ```bash
 multipass unmount ubuntu-instance
