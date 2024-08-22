@@ -126,7 +126,7 @@ Menggunakan python, kita bisa membuat server web sederhana untuk menguji coba fi
 
 Setelah dijalankan akses browser kamu menggunakan ip multipass kamu dan kamu akan melihat tampilan berikut:
 
-![alt text](./assets/2-build-deploy/1.png)
+![alt text](./assets/next-js-framework.jpg)
 
 
 Lanjutkan membuat proses automation dengan script build dan deploy.
