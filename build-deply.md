@@ -140,8 +140,12 @@ Karena kalian sudah paham bagaimana proses dari Build & Deployment, Sekarang kit
 
 Bayangkan jika kalian bekerja dalam satu tim dan masing-masing developer meng-update kodenya dan ngepush kodenya ke repositori dan kalian yang bertanggung jawab atas proses Build & Deployment itu akan sangat merepotkan kalian, masa kita harus standby setiap saat hanya untuk update proses Build & Deploymentnya? repot kan maka dari itu masalah ini kita bisa membuat solusinya dengan cara automatisasi.
 
+<br />
+
 > [!WARNING]
 > Disarankan mengikuti command dibawah untuk membuat struktur foldernya dan tidak membuat struktur folder sendiri agar scriptnya tidak error.
+
+<br />
 
 Langsung saja langkah-langkah untuk automatisasi dibawah ini.
 
@@ -345,10 +349,12 @@ Jika tidak install terlebih dahulu.
 sudo apt install python3 -y
 ```
 
+<br />
 
 > [!INFO]
 > Perlu diketahui, seharusnya proses deployment ini menggunakan web server seperti `nginx`, tapi karena kita belum ke materinya kita gunakan modul `http.server` dari `python` aja agar lebih simple.
 
+<br />
 
 Script ini berdasarkan proses Build & Deploy diatas copy dan paste script dibawah ini:
 
