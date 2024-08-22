@@ -2,7 +2,20 @@
 
 Author: Hudya Ramadhana
 
+- [**Overview**](#overview)
+	- [Build](#build)
+	- [Deployment](#deployment)
+- [**Build and Deployment Process**](#build-and-deployment-process)
+- [**Automate Build & Deployment Process**](#automate-build-&-deployment-process)
+	- [Automating Building Process](#automating-building-process)
+	- [Automating-Deploy Process](#automating-deploy-process)
+	- [Deploying Another Project](#deploying-another-project)
+- [**Summary**](#summary)
+
+<br />
+
 ## Overview
+***
 
 Pada materi kali ini kamu akan belajar mengenai proses build dan deploy pada lingkungan DevOps.
 
@@ -59,7 +72,10 @@ graph LR
     D --> E[Memindahkan ke path yang sesuai pada server tersebut]
 ```
 
-## Proses Build dan Deploy
+<br />
+
+## Build and Deployment Process
+***
 
 Proses build dan deploy akan dipisah menggunakan dua file berbeda, yaitu `build.sh` untuk membangun proyek dan `deploy.sh` untuk mendeploy proyek.
 
@@ -113,9 +129,12 @@ Setelah dijalankan akses browser kamu menggunakan ip multipass kamu dan kamu aka
 ![alt text](./assets/2-build-deploy/1.png)
 
 
-Lanjutkan membuat proses automation dengan script build.sh dan deploy.sh
+Lanjutkan membuat proses automation dengan script build dan deploy.
+
+<br />
 
 ## Automate Build & Deploy Processes
+***
 
 Karena kalian sudah paham bagaimana proses dari Build & Deployment, Sekarang kita akan membuat script untuk melakukan automasi dalam proses Build & Deployment, proses ini penting untuk diautomatisasi agar proses lebih cepat dan efisien dalam masa development.
 
@@ -326,7 +345,7 @@ Jika tidak install terlebih dahulu.
 sudo apt install python3 -y
 ```
 
->[!INFO]
+> [!INFO]
 > Perlu diketahui, seharusnya proses deployment ini menggunakan web server seperti `nginx`, tapi karena kita belum ke materinya kita gunakan modul `http.server` dari `python` aja agar lebih simple.
 
 Script ini berdasarkan proses Build & Deploy diatas copy dan paste script dibawah ini:
@@ -422,7 +441,7 @@ Lalu buka di browser kalian dengan `IP:PORT` contohnya `172.17.44.122:8080`, tid
 Dari sini pasti sudah kebayang gimana prosess Build & Deploy sebuah project, selanjutnya kita akan mencoba cloning project lagi tapi projectnya menggunakan framework lain yaitu `react.js` dan `vite.js` lalu di Build & Deploy secara automate dengan script yang sudah dibuat.
 
 
-#### Deploying Another Project 
+### Deploying Another Project 
 
  Perlu diingatkan juga didalam sebuah tim DevOps untuk membuat sebuah project mulai dari settingannya, infrastrukturnya, technologynya itu harus benar-benar butuh pertimbangan yang benar-benar matang dan kesepakatan konsensus bersama, maupun itu dari companynya langsung atau dari keputusan tim DevOps itu sendiri, jadi kalian tidak boleh asal pilih-pilih dan buat project tanpa aturannya, dengan adanya aturan konsensus ini membuat proses Build & Deploynya menjadi terstruktur, efisien, dan menghindari conflict antar developer.
  
@@ -456,7 +475,7 @@ vim vite.config.js
 
 Copas code dibawah ini:
 
-```json
+```bash
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -493,7 +512,18 @@ Terakhir deploy artifact dan akses project yang sudah dideploy di browser.
 
 ![](assets/matrix-site-.gif)
 
+<br />
+
 > Alasannya `vite.config.js` diganti itu kenapa?
 
-Kalau kalian lihat di script `automate-deploy.sh` ada line code dimana tempat modul python `http.server` nya di deploy, yaitu di direktori `out`, dan kalau kalian lihat lagi di settingan `vite.config.js` ada line code yang menambahkan output direktori dari proses build yaitu `outDir: 'out'`, ini bisa dijadikan salah satu contoh kesepakatan/konsensus bersama, yaitu setiap project yang dibuat harus memisahkan hasil build nya kedalam folder tersendiri agar terpisah dari product development dan product yang sudah jadi.
+Kalau kalian lihat di script `automate-deploy.sh` ada line code dimana tempat modul python `http.server` nya di deploy, yaitu di direktori `out`, dan kalau kalian lihat lagi di settingan `vite.config.js` ada line code yang menambahkan output direktori dari proses deploymentnya yaitu `outDir: 'out'`, ini bisa dijadikan salah satu contoh kesepakatan/konsensus bersama, yaitu setiap project yang dibuat harus memisahkan hasil build nya kedalam folder tersendiri agar terpisah dari product development dan product yang sudah jadi.
 
+<br />
+
+## Summary
+
+- **Proses build adalah proses yang menjadikan sebuah project menjadi produk akhir.**
+- **Setiap project build harus memilik artifact berbentuk tar.gz atau format lainnya agar mudah melakukan deployment, distribution, versioning, dan testing.**
+- **Project yang sudah dijadikan artifact bisa langsung dideploy ke server testing atau server prodcution.**
+- **Proses Build & Deployment bisa dibuat secara otomatis**
+- **Kesepakatan konsensus harus dibuat agar proses Build & Deploy bisa berlajan dengan lancar.**
