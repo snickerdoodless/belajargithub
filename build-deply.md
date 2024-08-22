@@ -351,7 +351,8 @@ sudo apt install python3 -y
 
 <br />
 
-> [!INFO]
+
+> [!NOTE]
 > Perlu diketahui, seharusnya proses deployment ini menggunakan web server seperti `nginx`, tapi karena kita belum ke materinya kita gunakan modul `http.server` dari `python` aja agar lebih simple.
 
 <br />
@@ -457,7 +458,7 @@ Dari sini pasti sudah kebayang gimana prosess Build & Deploy sebuah project, sel
 
 Langsung saja kita praktikan dibawah ini.
 
-Credit to user github Mif2006 saya menemukan contoh web app yang keren, langsung aja ikuti prosessnya dibawah ini.
+Credit to user github Mif2006 saya menemukan contoh web app keren yang menggunakan framework `react.js` dan `vite.js`, langsung aja ikuti prosessnya dibawah ini.
 
 Clone projectnya.
 
