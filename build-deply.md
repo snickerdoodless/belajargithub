@@ -126,7 +126,7 @@ Menggunakan python, kita bisa membuat server web sederhana untuk menguji coba fi
 
 Setelah dijalankan akses browser kamu menggunakan ip multipass kamu dan kamu akan melihat tampilan berikut:
 
-![alt text](/assets/next-js-framework.png)
+![alt text](./assets/2-build-deploy/1.png)
 
 
 Lanjutkan membuat proses automation dengan script build dan deploy.
@@ -510,11 +510,7 @@ Terakhir deploy artifact dan akses project yang sudah dideploy di browser.
 ./automate-deploy.sh MatrixWebsite
 ```
 
-<p align="center">
-  <img src="assets/matrix-site.gif" />
-</p>
-
-<br />
+![](assets/3.png)
 
 > Alasannya `vite.config.js` diganti itu kenapa?
 
