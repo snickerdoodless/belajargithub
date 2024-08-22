@@ -510,7 +510,7 @@ Terakhir deploy artifact dan akses project yang sudah dideploy di browser.
 ./automate-deploy.sh MatrixWebsite
 ```
 
-![](assets/matrix-site-.gif)
+![](assets/matrix-site-.gif): center
 
 <br />
 
