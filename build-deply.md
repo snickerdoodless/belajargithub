@@ -345,8 +345,10 @@ Jika tidak install terlebih dahulu.
 sudo apt install python3 -y
 ```
 
+
 > [!INFO]
 > Perlu diketahui, seharusnya proses deployment ini menggunakan web server seperti `nginx`, tapi karena kita belum ke materinya kita gunakan modul `http.server` dari `python` aja agar lebih simple.
+
 
 Script ini berdasarkan proses Build & Deploy diatas copy dan paste script dibawah ini:
 
@@ -511,6 +513,8 @@ Terakhir deploy artifact dan akses project yang sudah dideploy di browser.
 ```
 
 ![](assets/3.png)
+
+<br />
 
 > Alasannya `vite.config.js` diganti itu kenapa?
 
