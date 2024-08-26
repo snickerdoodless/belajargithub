@@ -10,13 +10,24 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 
 1.  Di multipass, `launch` atau buka `shell` instance kalian.
  
-	<details>
-	  <summary>Lihat Solusi</summary>
-	  <p>
-	    multipass launch --name ubuntu<br>
-	    multipass shell ubuntu
-	  </p>
-	</details>
+html
+<style>
+  details {
+    background-color: #f0f0f0; /* add a light gray background to the details element */
+  }
+
+  details p {
+    color: #00698f; /* set the text color to a blue-ish hue */
+  }
+</style>
+
+<details>
+  <summary>Lihat Solusi<br>Klik untuk melihat jawaban</summary>
+  <p>
+    multipass launch --name ubuntu<br>
+    multipass shell ubuntu
+  </p>
+</details>
 
 2.  Pastikan kalian di `home`, buat 3 folder untuk file berbentuk `assets`, `source`  dan `etc` kemudian beri nama belakangnya `folder`.
 
