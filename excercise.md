@@ -1,4 +1,9 @@
-## Dilatihan ini kalian akan mencoba mengatur folder dan file berdasarkan ekstensi dengan linux command.
+# Excercise 1: Managing Files & Folder Based on Their Extension
+***
+
+<br />
+
+### Dilatihan ini kalian akan mencoba mengatur folder dan file berdasarkan ekstensi dengan linux command.
 
 **Objective:**
 
@@ -49,7 +54,31 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 **5**.  Kemudian buat folder baru dan buat ini sebagai `subfolder`, yang pertama dibawah assets buat folder bernama audio, image, dan gif folder, lakukan hal yang sama dengan source tetapi dengan nama frontend dan backend folder.
 	<details>
 	  <summary>Lihat Solusi</summary>
-	    <code>mkdir -p assets/{audio, image, gif}<br></code>
+	    <code>mkdir -p assets/{audio, image, gif}</code><br />
 	    <code>mkdir -p source/{frontend, backend}</code>
+	</details>
+
+<br />
+
+**6**.  Pindahkan `semua` yang bernama source dan semua file bernama database ke folder `backend` dan pindahkan semua file yang bernama frontend ke folder `frontend`.
+	<details>
+	  <summary>Lihat Solusi</summary>
+	    <code>mv source* database* source-folder/backend frontend* source-folder/frontend</code>
+	</details>
+
+<br />
+
+**7**. Sama seperti tadi, sekarang pindahkan dan `sesuaikan` sisa file yang ada ke direktori masing-masing berdasarkan ekstensinya.
+	<details>
+	  <summary>Lihat Solusi</summary>
+	    <code>mv gif* assets-folder/gif image* assets-folder/image audio* assets-folder/audio</code>
+	</details>
+
+<br />
+
+**8**.  Konfirmasi bahwa semua file sudah tergoranisir berdasarkan folder tujuannya serta ekstensinya.
+	<details>
+	  <summary>Lihat Solusi</summary>
+	    <code>ls assets-folder/gif assets-folder/image assets-folder/audio source-folder/frontend source-folder/backend > manage-structure.txt</code>
 	</details>
 
