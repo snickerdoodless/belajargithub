@@ -35,6 +35,8 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 	  </p>
 	</details>
 
+<br />
+
 3.  Buatlah 10 file `kosong` bernama source berekstensi `.js`, 2 file bernama database dengan ekstensi `.db`, 1 dari ekstensi `.css` bernama style, 5 dari ekstensi `.jpg` bernama gambar, 3 dari `.gif` bernama gif, dan 3 dari `.mp3` bernama audio.
 
 	<details>
