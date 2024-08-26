@@ -16,13 +16,10 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 
 **1.**  Di multipass, `launch` atau buka `shell` instance kalian.
  
-	<details>
-	  <summary>Lihat Solusi</summary>
-	  <p>
-	    multipass launch --name ubuntu<br>
-	    multipass shell ubuntu
-	  </p>
-	</details>
+<details>
+  <summary>Lihat Solusi</summary>
+  <code>ls -l<br>file * > etc/type.txt<br>cat etc/type.txt</code>
+</details>
 
 <br />
 
