@@ -25,7 +25,7 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
   <details>
     <summary>Lihat Solusi</summary>
     <code>cd /home/ubuntu</code><br />
-    <code>mkdir {assets,source,etc}-folder</code>
+    <code>mkdir {assets,sources,etc}-folder</code>
   </details>
 
 <br />
@@ -54,7 +54,7 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 	<details>
 	  <summary>Lihat Solusi</summary>
 	    <code>mkdir -p assets-folder/{audio,image,gif}</code><br />
-	    <code>mkdir -p source-folder/{frontend,backend}</code>
+	    <code>mkdir -p sources-folder/{frontend,backend}</code>
 	</details>
 
 <br />
@@ -62,7 +62,7 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 **6**.  Pindahkan `semua` yang bernama source dan semua file bernama database ke folder `backend` dan pindahkan semua file yang bernama frontend ke folder `frontend`.
 	<details>
 	  <summary>Lihat Solusi</summary>
-	    <code>mv source* database* source-folder/backend frontend* source-folder/frontend</code>
+	    <code>mv source* database* sources-folder/backend front* source-folder/frontend</code>
 	</details>
 
 <br />
@@ -78,7 +78,7 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 **8**.  Konfirmasi bahwa semua file sudah tergoranisir berdasarkan folder tujuannya serta ekstensinya.
 	<details>
 	  <summary>Lihat Solusi</summary>
-	    <code>ls assets-folder/gif assets-folder/image assets-folder/audio source-folder/frontend source-folder/backend > manage-structure.txt</code><br />
+	    <code>ls assets-folder/gif assets-folder/image assets-folder/audio sources-folder/frontend sources-folder/backend > manage-structure.txt</code><br />
 	    <code>cat etc-folder/manage-structure.txt</code>
 	</details>
 
@@ -91,6 +91,4 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 Selamat kalian sudah bisa menguasai bagaimana caranya mengatur file dan folder berdasarkan ekstensi 🥳.
 
 Shoutout buat kalian yang tidak sama sekali melihat solusi 😎.
-
-
 
