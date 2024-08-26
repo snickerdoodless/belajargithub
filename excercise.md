@@ -1,9 +1,3 @@
-
-# Excercise 1: Managing Files & Folder Based on Their Extension
-***
-
-<br />
-
 ## Dilatihan ini kalian akan mencoba mengatur folder dan file berdasarkan ekstensi dengan linux command.
 
 **Objective:**
@@ -23,50 +17,39 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 
 <br />
 
-<br />
-
-2.  Pastikan kalian di `home`, buat 3 folder untuk file berbentuk `assets`, `source`  dan `etc` kemudian beri nama belakangnya `folder`.
-
-	<details>
-	  <summary>Lihat Solusi</summary>
-	  <p>
-	    cd /home/ubuntu<br>
-	    mkdir {assets,source,etc}-folder
-	  </p>
-	</details>
+**2**.  Pastikan kalian di `home`, buat 3 folder untuk file berbentuk `assets`, `source`  dan `etc` kemudian beri nama belakangnya `folder`.
+  <details>
+    <summary>Lihat Solusi</summary>
+    <code>cd /home/ubuntu</code><br />
+    <code>mkdir {assets,source,etc}-folder</code>
+  </details>
 
 <br />
 
-3.  Buatlah 5 file `kosong` bernama source berekstensi `.js` dan 5 bernama front, 2 file bernama database dengan ekstensi `.db`, 1 dari ekstensi `.css` bernama style, 5 dari ekstensi `.jpg` bernama gambar, 3 dari `.gif` bernama gif, dan 3 dari `.mp3` bernama audio.
-
-	<details>
-	  <summary>Lihat Solusi</summary>
-	  <p>
-	    touch {source,front}{1..5}.js ; touch database{1,2}.db<br>
-	    touch style.css ; touch gambar{1..5}.jpg<br>
-	    touch gif{1,2,3}.gif ; touch audio{1..3}.mp3
-	  </p>
-	</details>
+**3**.  Buatlah 5 file `kosong` bernama source berekstensi `.js` dan 5 bernama front, 2 file bernama database dengan ekstensi `.db`, 1 dari ekstensi `.css` bernama style, 5 dari ekstensi `.jpg` bernama gambar, 3 dari `.gif` bernama gif, dan 3 dari `.mp3` bernama audio.
+  <details>
+    <summary>Lihat Solusi</summary>
+    <code>touch {source,front}{1..5}.js ; touch database{1,2}.db</code><br />
+    <code>touch style.css ; touch gambar{1..5}.jpg</code><br />
+    <code>touch gif{1,2,3}.gif ; touch audio{1..3}.mp3</code>
+  </details>
 
 <br />
 
-4.  Sekarang coba `konfirmasi` bahwa file kosong dan folder kosong sudah dibuat dan pastikan `tipe` nya.
+**4**.  Sekarang coba `konfirmasi` bahwa file kosong dan folder kosong sudah dibuat dan pastikan `tipe` nya
+  <details>
+    <summary>Lihat Solusi</summary>
+    <code>ls -l</code><br />
+    <code>file * > etc/type.txt</code><br />
+    <code>cat etc/type.txt</code>
+  </details>
 
+<br />
+
+**5**.  Kemudian buat folder baru dan buat ini sebagai `subfolder`, yang pertama dibawah assets buat folder bernama audio, image, dan gif folder, lakukan hal yang sama dengan source tetapi dengan nama frontend dan backend folder.
 	<details>
 	  <summary>Lihat Solusi</summary>
-	  <p>
-	    ls -l<br>
-	    file * > etc/type.txt<br>
-	    cat etc/type.txt
-	  </p>
+	    <code>mkdir -p assets/{audio, image, gif}<br></code>
+	    <code>mkdir -p source/{frontend, backend}</code>
 	</details>
 
-5.  Kemudian buat folder baru dan buat ini sebagai `subfolder`, yang pertama dibawah assets buat folder bernama audio, image, dan gif folder, lakukan hal yang sama dengan source tetapi dengan nama frontend dan backend folder.
-
-	<details>
-	  <summary>Lihat Solusi</summary>
-	  <p>
-	    mkdir -p assets/{audio, image, gif}<br>
-	    mkdir -p source/{frontend, backend}
-	  </p>
-	</details>
