@@ -16,12 +16,11 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 
 **1.**  Di multipass, `launch` atau buka `shell` instance kalian.
  
-<details>
-  <summary>Lihat Solusi</summary>
-  <code>ls -l</code><br />
-  <code>file * > etc/type.txt</code><br />
-  <code>cat etc/type.txt</code>
-</details>
+  <details>
+    <summary>Lihat Solusi</summary>
+    <code>multipass --launch lab-managing</code><br />
+    <code>multipass shell lab-managing</code>
+  </details>
 
 <br />
 
