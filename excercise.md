@@ -23,6 +23,8 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 	  </p>
 	</details>
 
+<br />
+
 2.  Pastikan kalian di `home`, buat 3 folder untuk file berbentuk `assets`, `source`  dan `etc` kemudian beri nama belakangnya `folder`.
 
 	<details>
