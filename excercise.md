@@ -15,12 +15,13 @@ Mengatur direktori yang berisi berbagai file dan subfolder dengan ekstensi berbe
 Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 
 **1.**  Di multipass, `launch` atau buka `shell` instance kalian.
- 
   <details>
     <summary>Lihat Solusi</summary>
     <code>multipass --launch lab-managing</code><br />
     <code>multipass shell lab-managing</code>
   </details>
+
+<br />
 
 <br />
 
