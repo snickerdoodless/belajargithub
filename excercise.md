@@ -62,7 +62,8 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 **6**.  Pindahkan `semua` yang bernama source dan semua file bernama database ke folder `backend` dan pindahkan semua file yang bernama frontend ke folder `frontend`.
 	<details>
 	  <summary>Lihat Solusi</summary>
-	    <code>mv source* database* sources-folder/backend front* source-folder/frontend</code>
+	    <code>mv front* *.css sources-folder/frontend</code><br />
+	    <code>mv *.js database* sources-folder/backend</code><br />
 	</details>
 
 <br />
@@ -70,7 +71,9 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 **7**. Sama seperti tadi, sekarang pindahkan dan `sesuaikan` sisa file yang ada ke direktori masing-masing berdasarkan ekstensinya.
 	<details>
 	  <summary>Lihat Solusi</summary>
-	    <code>mv gif* assets-folder/gif image* assets-folder/image audio* assets-folder/audio</code>
+	    <code>mv gif* assets-folder/gif</code><br />
+	    <code>mv gambar* assets-folder/image</code><br /> 
+	    <code>mv audio* assets-folder/audio</code>
 	</details>
 
 <br />
