@@ -6,10 +6,12 @@ Dilatihan ini kalian akan mencoba mengatur folder dan file berdasarkan ekstensi 
 **Outcomes**
 Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 
-1. Di multipass, launch atau buka shell instance kalian.
+1.  Di multipass, launch atau buka shell instance kalian.
 
-	<details>
-	  <summary>Lihat Solusi</summary>
-	  multipass launch --name ubuntu<br>
-	  multipass shell ubuntu
-	</details>
+<details>
+  <summary>Lihat Solusi</summary>
+  <p>
+    multipass launch --name ubuntu<br>
+    multipass shell ubuntu
+  </p>
+</details>
