@@ -18,9 +18,9 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
  
 <details>
   <summary>Lihat Solusi</summary>
-  <code>ls -l<br /></code>
-<code>file * > etc/type.txt<br /></code>
-<code>cat etc/type.txt</code>
+  <code>ls -l</code><br />
+  <code>file * > etc/type.txt</code><br />
+  <code>cat etc/type.txt</code>
 </details>
 
 <br />
