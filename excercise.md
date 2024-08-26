@@ -10,6 +10,6 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 
 	<details>
 	  <summary>Lihat Solusi</summary>
-	  multipass launch --name ubuntu
+	  multipass launch --name ubuntu<br>
 	  multipass shell ubuntu
 	</details>
