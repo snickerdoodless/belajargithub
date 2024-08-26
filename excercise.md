@@ -10,22 +10,11 @@ Hasil latihan ini kalian akan bisa manage file dan folder berdasarkan ekstensi.
 
 1.  Di multipass, `launch` atau buka `shell` instance kalian.
  
-html
-<style>
-  details {
-    background-color: #f0f0f0; /* add a light gray background to the details element */
-  }
-
-  details p {
-    color: #00698f; /* set the text color to a blue-ish hue */
-  }
-</style>
-
 <details>
   <summary>Lihat Solusi<br>Klik untuk melihat jawaban</summary>
   <p>
-    multipass launch --name ubuntu<br>
-    multipass shell ubuntu
+    ***multipass launch --name ubuntu***
+    ***multipass shell ubuntu***
   </p>
 </details>
 
