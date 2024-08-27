@@ -1,4 +1,4 @@
-<pre style="background-color: #f2f2f2; padding: 10px;">
+<pre style="background-color: #ccd1d1; padding: 10px;">
   This is a code block
   with multiple lines
   of code
