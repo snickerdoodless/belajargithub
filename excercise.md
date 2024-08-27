@@ -1,4 +1,4 @@
-# Excercise 2: Creating Backup Files with Timestamp Along With Source and Destination Folder
+Excercise 2: Creating Backup Files with Timestamp Along With Source and Destination Folder
 ***
 
 #### Dalam latihan ini, Kalian akan mencoba membuat file menggunakan stempel waktu, serta menentukan folder source dan destination menggunakan perintah Linux.
@@ -11,10 +11,10 @@ Memahami dan mempraktikkan pembuatan file cadangan dengan stempel waktu mengguna
 
 Peserta akan dapat membuat file cadangan dengan stempel waktu yang unik, menentukan dan menggunakan direktori sumber dan tujuan yang berbeda, serta mengembangkan pemahaman yang lebih baik tentang manajemen file dan direktori di lingkungan Linux.
 
-**1.**  Di multipass, `launch` at buka `shell` instance kalian dan pastikan kalian di `home` directory.
+**1.**  Di Multipass, jalankan perintah `launch` dan buka `shell` instance kalian, lalu pastikan kalian berada di direktori `home`.
   <details>
     <summary>Lihat Solusi</summary>
-    <code>multipass shell lab-excercise</code>< br/>
+    <code>multipass shell lab-excercise</code><br />
     <code>cd /home/ubuntu</code>
   </details>
 
@@ -36,7 +36,6 @@ Peserta akan dapat membuat file cadangan dengan stempel waktu yang unik, menentu
 function show_time() {
     echo "Current time: $(date)"
 }
-
 show_time</pre></details>
 
 <br />
@@ -45,7 +44,7 @@ show_time</pre></details>
   <details>
     <summary>Lihat Solusi</summary>
     <code>chmod +x Projects/telltime.sh</code><br />
-    <code>./telltime.sh</code>
+    <code>Projects/telltime.sh</code>
   </details>
 
 <br />
@@ -58,10 +57,10 @@ show_time</pre></details>
 
 <br />
 
-**6.**  Buat variabel global bernama `TIMESTAMP` di CLI, beri valuenya dengan command `date` dan spesifikan waktunya berdasarkan `YYYY-MM-DD hh:mm:ss` gunakan man untuk melihat formatnya lalu pastikan variabelnya terbuat. 
+**6.**  Buat variabel global bernama `TIMESTAMP` di commandline interface, beri valuenya dengan command `date` dan spesifikan waktunya berdasarkan `YYYY-MM-D_Dhh:mm:ss` gunakan man untuk melihat formatnya lalu pastikan variabelnya terbuat. 
   <details>
     <summary>Lihat Solusi</summary>
-    <code>TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")</code><br />
+    <code>TIMESTAMP=$(date "+%Y-%m-%d_%H:%M:%S")</code><br />
     <code>echo $TIMESTAMP</code>
   </details>
 
@@ -70,7 +69,7 @@ show_time</pre></details>
 **7.**  Sekarang `Backup` file `telltime.sh` dengan folder `Backups/2024` sebagai destination dan beri ekstensi `tar.gz` menggunakan perintah `tar` linux, gunakan man untuk caranya, dan beri nama file backup tersebut dengan variabel `TIMESTAMP` yang baru dibuat.
   <details>
     <summary>Lihat Solusi</summary>
-    <code>tar -c -f Backups/2024/$TIMESTAMP.tar.gz</code>
+    <code>cd Projects | tar -c -f ../Backups/2024/$TIMESTAMP.tar.gz telltime.sh</code>
   </details>
 
 <br />
@@ -94,7 +93,7 @@ show_time</pre></details>
   <details>
     <summary>Lihat Solusi</summary>
 	<code>./telltime.sh</code><br />
-	<code>tar -cf Backups/2023/$TIMESTAMP.tar.gz telltime.sh</code><br />
+	<code>tar -cf ../Backups/2023/$TIMESTAMP.tar.gz telltime.sh</code><br />
 	<code>rm telltime.sh</code>
   </details>
 
@@ -103,7 +102,7 @@ show_time</pre></details>
 **9.**  Selanjutnya `ekstrak` script yang sebelumnya dihapus dengan file `backup` yang sudah dibuat dengan menggunakan perintah `tar` kedalam `source` directory, lihat man untuk caranya.
   <details>
     <summary>Lihat Solusi</summary>
-	<code>tar -x -f Backups/2023/#archiveyangterbaru -C /home/ubuntu/Projects</code>
+	<code>tar -x -f ../Backups/2024/#archiveyangterbaru -C /home/ubuntu/Projects</code>
   </details>
 
 **10.**  Terakhir hapus semua file dan folder yang ada.
@@ -115,3 +114,5 @@ show_time</pre></details>
 Selamat kalian sudah bisa menguasai caranya membackup sebuah file berdasarkan source dan destination folder 🥳.
 
 Salute buat kalian yang sama sekali tidak melihat solusi 😎.
+
+
