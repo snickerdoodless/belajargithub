@@ -1,5 +1,3 @@
-Excercise 2: Creating Backup Files with Timestamp Along With Source and Destination Folder
-***
 
 #### Dalam latihan ini, Kalian akan mencoba membuat file menggunakan stempel waktu, serta menentukan folder source dan destination menggunakan perintah Linux.
 
@@ -34,8 +32,9 @@ Peserta akan dapat membuat file cadangan dengan stempel waktu yang unik, menentu
     <pre>#!/bin/bash
 
 function show_time() {
-    echo "Current time: $(date)"
+  echo "Current time: $(date)"
 }
+
 show_time</pre></details>
 
 <br />
@@ -69,7 +68,7 @@ show_time</pre></details>
 **7.**  Sekarang `Backup` file `telltime.sh` dengan folder `Backups/2024` sebagai destination dan beri ekstensi `tar.gz` menggunakan perintah `tar` linux, gunakan man untuk caranya, dan beri nama file backup tersebut dengan variabel `TIMESTAMP` yang baru dibuat.
   <details>
     <summary>Lihat Solusi</summary>
-    <code>cd Projects | tar -c -f ../Backups/2024/$TIMESTAMP.tar.gz telltime.sh</code>
+    <code>cd Projects ; tar -c -f ../Backups/2024/$TIMESTAMP.tar.gz telltime.sh</code>
   </details>
 
 <br />
@@ -80,20 +79,20 @@ show_time</pre></details>
     <pre>#!/bin/bash
 
 function show_time() {
-    read -p "Please enter your name: " name
-    echo "Hello, $name!"
-    echo "Right now is $(date) at Asia/Jakarta timezone"
+  read -p "Please enter your name: " name
+  echo "Hello, $name!"
+  echo "Right now is $(date) at Asia/Jakarta timezone"
 }
 
 show_time</pre></details>
 
 <br />
 
-**8.**  Coba jalankan script `telltime.sh` lalu backup lagi file dengan cara yang sama sebelumnya, kemudian hapus `telltime.sh` nya.
+**8.**  Coba jalankan script `telltime.sh` lalu backup lagi filenya dengan cara yang sama sebelumnya tetapi jalankan variabel `TIMESTAMP` lagi sebelum membackup, kemudian hapus `telltime.sh` nya.
   <details>
     <summary>Lihat Solusi</summary>
 	<code>./telltime.sh</code><br />
-	<code>tar -cf ../Backups/2023/$TIMESTAMP.tar.gz telltime.sh</code><br />
+	<code>TIMESTAMP=$(date "+%Y-%m-%d_%H:%M:%S") ; tar -cf ../Backups/2024/$TIMESTAMP.tar.gz telltime.sh</code><br />
 	<code>rm telltime.sh</code>
   </details>
 
