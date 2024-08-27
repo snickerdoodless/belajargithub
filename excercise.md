@@ -1,3 +1,5 @@
+xcercise 2: Creating Backup Files with Timestamp Along With Source and Destination Folder
+***
 
 #### Dalam latihan ini, Kalian akan mencoba membuat file menggunakan stempel waktu, serta menentukan folder source dan destination menggunakan perintah Linux.
 
@@ -26,7 +28,7 @@ Peserta akan dapat membuat file cadangan dengan stempel waktu yang unik, menentu
 
 <br />
 
-**3.**  Buka file kosong yang baru dibuat dengan `vim` lalu buat function sederhana untuk menampilkan waktu menggunakan command `date`.
+**3.**  Buka file kosong yang baru didalam source folder dengan `vim` lalu buat function sederhana untuk menampilkan waktu menggunakan command `date`.
   <details>
     <summary>Lihat Solusi</summary>
     <pre>#!/bin/bash
@@ -79,12 +81,12 @@ show_time</pre></details>
     <pre>#!/bin/bash
 
 function show_time() {
-  read -p "Please enter your name: " name
-  echo "Hello, $name!"
-  echo "Right now is $(date) at Asia/Jakarta timezone"
-}
-
-show_time</pre></details>
+	  read -p "Please enter your name: " name
+	  echo "Hello, $name!"
+	  echo "Right now is $(date) at Asia/Jakarta timezone"
+	}
+	
+	show_time</pre></details>
 
 <br />
 
@@ -107,7 +109,7 @@ show_time</pre></details>
 **10.**  Terakhir hapus semua file dan folder yang ada.
   <details>
     <summary>Lihat Solusi</summary>
-	<code>rm -rf *</code>
+	<code>cd .. ; rm -rf *</code>
   </details>
 
 Selamat kalian sudah bisa menguasai caranya membackup sebuah file berdasarkan source dan destination folder 🥳.
