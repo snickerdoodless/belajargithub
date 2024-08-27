@@ -1,18 +1,4 @@
 
-
-# Excercise 2: Creating Backup Files with Timestamp Along With Source and Destination Folder
-***
-
-#### Dalam latihan ini, Kalian akan mencoba membuat file menggunakan stempel waktu, serta menentukan folder source dan destination menggunakan perintah Linux.
-
-**Objective:**
-
-Memahami dan mempraktikkan pembuatan file cadangan dengan stempel waktu menggunakan perintah Linux, serta mengatur folder sumber (source) dan tujuan (destination) untuk menyimpan file tersebut.
-
-**Outcomes:**
-
-Peserta akan dapat membuat file cadangan dengan stempel waktu yang unik, menentukan dan menggunakan direktori sumber dan tujuan yang berbeda, serta mengembangkan pemahaman yang lebih baik tentang manajemen file dan direktori di lingkungan Linux.
-
 **1.**  Di Multipass, jalankan perintah `launch` dan buka `shell` instance kalian, lalu pastikan kalian berada di direktori `home`.
   <details>
     <summary>Lihat Solusi</summary>
@@ -92,23 +78,22 @@ function show_time() {
 
 <br />
 
-**8.**  Coba jalankan script `telltime.sh` lalu backup lagi filenya dengan cara yang sama sebelumnya tetapi jalankan variabel `TIMESTAMP` lagi sebelum membackup, kemudian hapus `telltime.sh` nya.
+**9.**  Coba jalankan script `telltime.sh` lalu backup lagi filenya dengan cara yang sama sebelumnya tetapi jalankan variabel `TIMESTAMP` lagi sebelum membackup, kemudian hapus `telltime.sh` nya.
   <details>
     <summary>Lihat Solusi</summary>
 	<code>./telltime.sh</code><br />
 	<code>TIMESTAMP=$(date "+%Y-%m-%d_%H:%M:%S") ; tar -cf ../Backups/2024/$TIMESTAMP.tar.gz telltime.sh</code><br />
-	<code>rm telltime.sh</code>
-  </details>
+	<code>rm telltime.sh</code></details>
 
 <br />
 
-**9.**  Selanjutnya `ekstrak` script yang sebelumnya dihapus dengan file `backup` yang sudah dibuat dengan menggunakan perintah `tar` kedalam `source` directory, lihat man untuk caranya.
+**10.**  Selanjutnya `ekstrak` script yang sebelumnya dihapus dengan file `backup` yang sudah dibuat dengan menggunakan perintah `tar` kedalam `source` directory, lihat man untuk caranya.
   <details>
     <summary>Lihat Solusi</summary>
 	<code>tar -x -f ../Backups/2024/#archiveyangterbaru -C /home/ubuntu/Projects</code>
   </details>
 
-**10.**  Terakhir hapus semua file dan folder yang ada.
+**11.**  Terakhir hapus semua file dan folder yang ada.
   <details>
     <summary>Lihat Solusi</summary>
 	<code>cd .. ; rm -rf *</code>
@@ -117,3 +102,4 @@ function show_time() {
 Selamat kalian sudah bisa menguasai caranya membackup sebuah file berdasarkan source dan destination folder 🥳.
 
 Salute buat kalian yang sama sekali tidak melihat solusi 😎.
+
