@@ -2,7 +2,8 @@
   <details>
     <summary>Lihat Solusi</summary>
     <code>function show_time() {
-    echo "Current time: $(date +'%Y-%m-%d %H:%M:%S')"
-}</code>
-  </details>
+        echo "Current time: $(date)"
+}
 
+show_time</code>
+  </details>
