@@ -1,4 +1,6 @@
-xcercise 2: Creating Backup Files with Timestamp Along With Source and Destination Folder
+
+
+# Excercise 2: Creating Backup Files with Timestamp Along With Source and Destination Folder
 ***
 
 #### Dalam latihan ini, Kalian akan mencoba membuat file menggunakan stempel waktu, serta menentukan folder source dan destination menggunakan perintah Linux.
@@ -115,5 +117,3 @@ function show_time() {
 Selamat kalian sudah bisa menguasai caranya membackup sebuah file berdasarkan source dan destination folder 🥳.
 
 Salute buat kalian yang sama sekali tidak melihat solusi 😎.
-
-
