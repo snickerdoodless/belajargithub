@@ -74,7 +74,7 @@ function show_time() {
 	  echo "Right now is $(date) at Asia/Jakarta timezone"
 	}
 	
-	show_time</pre></details>
+show_time</pre></details>
 
 <br />
 
