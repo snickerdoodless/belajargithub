@@ -26,6 +26,7 @@ https://github.com/Komandro-CCIT/devops-exercise.git
 **4**. Kemudian buat folder baru bernama `static`, `media` dan `code`.
 
 Expected Output:
+
 ![](assets/latihan/exercise-1.1.png)
 
 ***
