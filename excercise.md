@@ -5,6 +5,8 @@
 
 ### Dalam latihan ini, Kalian akan mengatur folder dan file berdasarkan ekstensinya menggunakan perintah Linux.
 
+<br />
+
 **Objective:**
 
 Mempelajari cara mengelola dan mengimplementasikan struktur direktori dengan mengelompokkan file dan subfolder berdasarkan ekstensi ke dalam folder terpisah sesuai jenis file.
@@ -71,6 +73,8 @@ Selamat kalian sudah bisa menguasai bagaimana caranya mengatur file dan folder b
 
 ### Dalam latihan ini, Kalian akan mencoba membuat file menggunakan stempel waktu, serta menentukan folder source dan destination menggunakan perintah Linux.
 
+<br />
+
 **Objective:**
 
 Memahami dan mempraktikkan pembuatan file cadangan dengan stempel waktu menggunakan perintah Linux, serta mengatur folder sumber (source) dan tujuan (destination) untuk menyimpan file tersebut.
@@ -78,6 +82,8 @@ Memahami dan mempraktikkan pembuatan file cadangan dengan stempel waktu mengguna
 **Outcomes:**
 
 Peserta akan dapat membuat file cadangan dengan stempel waktu yang unik, menentukan dan menggunakan direktori sumber dan tujuan yang berbeda, serta mengembangkan pemahaman yang lebih baik tentang manajemen file dan direktori di lingkungan Linux.
+
+<br />
 
 **1.**  Di Multipass, buka `shell` instance kalian, lalu pastikan kalian berada di direktori `home`.
 ***
