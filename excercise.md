@@ -15,9 +15,9 @@ Peserta akan mampu mengelola file dan folder berdasarkan ekstensi, termasuk memi
 <br />
 
 **1.**  Di Multipass, buat instance dengan `launch` atau buka `shell` instance yang sudah ada.
-
+***
 **2**.  Pastikan kalian di `home` dan clone repository berikut
-
+***
 ```
 https://github.com/Komandro-CCIT/devops-exercise.git
 ```
