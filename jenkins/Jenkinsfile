@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     stages {
-        stage("Test Triggers") { /
+        stage("Test Triggers") { 
             steps {
                 echo "Triggers Success"
             }
