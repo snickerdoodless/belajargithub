@@ -5,6 +5,7 @@ pipeline {
         stage("Test Triggers") { 
             steps {
                 echo "Git Webhook Trigger Success!"
+                echo "Poll SCM Success!"
             }
 
             post {
